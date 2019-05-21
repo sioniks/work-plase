@@ -1,0 +1,386 @@
+.page-locations {
+  .header__wrap {
+    &.s1 {
+      background: $main-yellow;
+    }
+
+    &.s2 {
+      background: #FCF4EC;
+    }
+
+    &.s3 {
+      background: #FFF2F6;
+    }
+  }
+}
+
+
+.locations {
+  &__wrap {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+
+    .section-n1 {
+      height: 565px;
+      background: $main-yellow;
+
+
+      @include respond-to(t) {
+        height: 485px;
+      }
+
+      @include respond-to(lp) {
+        z-index: 2;
+        overflow: visible;
+        height: 575px;
+      }
+
+      @include respond-to(lg) {
+        height: 690px;
+      }
+
+      .block {
+        height: 100%;
+      }
+
+      .section-h3 {
+        margin-top: 0;
+        margin-bottom: 60px;
+
+        @include respond-to(t) {
+          margin-bottom: 50px;
+        }
+
+        @include respond-to(lp) {
+          margin-bottom: 65px;
+        }
+
+        @include respond-to(lg) {
+          margin-bottom: 80px;
+        }
+      }
+
+      .city-dropdown {
+        display: none;
+
+        @include respond-to(lp) {
+
+          display: block;
+          position: absolute;
+          display: flex;
+          bottom: 30px;
+          left: 100px;
+        }
+
+        @include respond-to(lg) {
+          bottom: 50px;
+          left: 130px;
+        }
+
+        .dropdown-name {
+          font-family: $MontBold;
+          font-size: 14px;
+          text-transform: uppercase;
+          margin-right: 40px;
+          padding-top: 6px;
+          opacity: .3;
+
+          @include respond-to(lg) {
+            font-size: 16px;
+            padding-top: 11px;
+          }
+        }
+
+        .city {
+          margin: 0;
+        }
+
+      }
+    }
+
+    div[data-pjax-container] {
+      position: relative;
+      z-index: 1;
+    }
+
+  }
+
+  &-section {
+    display: block;
+    height: auto;
+    overflow: hidden;
+
+    &.peach {
+      background: #FCF3F2;
+    }
+
+    &.forest {
+      background: #EFF5F1;
+    }
+
+    &.golden {
+      background: #F7F3EC;
+    }
+
+    &.lavender {
+      background: #F6F5FB;
+    }
+
+    &.teal {
+      background: #EDF3F2;
+    }
+
+    &.mauve {
+      background: #FBF6F9;
+    }
+
+    &.yale {
+      background: #F1F4F9;
+    }
+
+    &.ireland {
+      background: #F6FFF0;
+    }
+
+    &.deep {
+      background: #F2F4F7;
+    }
+
+    &.prussian {
+      background: #F1F5F9;
+    }
+
+    &.ash {
+      background: #F7F4F3;
+    }
+
+    &.morning {
+      background: #F6F2EF;
+    }
+
+    &.coffe {
+      background: #FCF5F1;
+    }
+
+    &.austrian {
+      background: #F2F3F8;
+    }
+
+    &.soft {
+      background: #F7F6EE;
+    }
+
+    &.ginger {
+      background: #F7F1EC;
+    }
+
+    &:nth-of-type(odd) {
+      .locations-link {
+        flex-direction: row-reverse;
+      }
+    }
+
+    .button__box {
+      margin-bottom: 65px;
+
+      @include respond-to(lp) {
+        display: none;
+      }
+    }
+
+    .section-text {
+      margin-bottom: 110px;
+      padding: 0;
+      line-height: 1.6;
+      color: #4a4a4a;
+
+      @include respond-to(lp) {
+        width: 430px;
+        text-align: center;
+      }
+
+      @include respond-to(lg) {
+        margin-bottom: 160px;
+        font-size: 18px;
+      }
+    }
+
+    .section:last-child() {
+      margin-bottom: 60px;
+
+      @include respond-to(lg) {
+        font-size: 58px;
+        margin-bottom: 100px;
+      }
+    }
+
+    .block {
+      @include respond-to(lp) {
+        min-height: 375px;
+      }
+    }
+
+    .block-left {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 570px;
+
+      @include respond-to(t) {
+        height: 445px;
+      }
+
+      @include respond-to(lp) {
+        height: 375px;
+        width: 50%;
+        padding: 0;
+      }
+
+      @include respond-to(lg) {
+        height: 570px;
+      }
+    }
+
+    .block-right {
+      position: relative;
+      padding: 0;
+      height: 570px;
+
+      @include respond-to(t) {
+        min-height: 445px;
+        height: 445px;
+      }
+
+      @include respond-to(lp) {
+        min-height: 375px;
+        height: 375px;
+        width: 50%;
+        padding: 0;
+      }
+
+      @include respond-to(lg) {
+        height: 570px;
+      }
+    }
+
+    .block-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+
+      img {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        left: 0;
+      }
+    }
+
+  }
+
+  &-title {
+    position: relative;
+    display: block;
+    width: auto;
+    padding-left: 50px;
+    font-family: $MontSemiBold;
+
+    @include respond-to(t) {
+      text-align: center;
+      width: auto;
+    }
+
+    @include respond-to(lp) {
+      padding-left: 70px;
+    }
+
+    @include respond-to(lg) {
+      padding-left: 80px;
+    }
+  }
+
+  &-number {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 41px;
+    height: 41px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #000;
+    border-radius: 50px;
+    color: #000;
+    opacity: .1;
+    margin-right: 10px;
+    font-size: 16px;
+
+    @include respond-to(lp) {
+      margin-right: 30px;
+      top: 8px;
+    }
+
+    @include respond-to(lg) {
+      width: 64px;
+      height: 64px;
+      font-size: 24px;
+      margin-right: 40px;
+    }
+  }
+
+  &-name {
+    position: relative;
+    font-size: 18px;
+    font-family: $MontSemiBold;
+    line-height: 1.6;
+    display: inline-block;
+    // border-bottom: 2px solid #000;
+    height: 30px;
+    overflow: hidden;
+
+    &:after {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 2px;
+      background: #000;
+      bottom: 0;
+      left: 0;
+      transition: all .5s ease;
+    }
+
+
+
+    @include respond-to(t) {
+      height: 45px;
+      font-size: 30px;
+
+      // border-bottom: 3px solid #000;
+    }
+
+    @include respond-to(lp) {
+      &:hover {
+        &:after {
+          left: -100%;
+        }
+      }
+    }
+
+    @include respond-to(lg) {
+      height: 70px;
+      font-size: 48px;
+    }
+  }
+
+  &-link {
+    @include respond-to(lp) {
+      display: flex;
+      flex-direction: row;
+
+    }
+  }
+}

@@ -1,0 +1,737 @@
+.page-about {
+  .header__wrap {
+    &.full {
+      transition: background .5s ease-in;
+      background: #007fb3;
+
+      .menu-link {
+
+        @include respond-to(lp) {
+          color: #fff;
+        }
+
+        &:after {
+          background: #fff;
+        }
+      }
+
+      .custom-select-trigger {
+        @include respond-to(lp) {
+          color: #fff;
+        }
+
+        &:after {
+          @include respond-to(lp) {
+            border-bottom: 2px solid #fff;
+            border-right: 2px solid #fff;
+          }
+
+        }
+      }
+    }
+  }
+
+  .footer {
+    background: #dceef5;
+  }
+
+  .footer-full {
+    .footer-top {
+      background: #e5f8ff;
+    }
+
+    .footer-center {
+      background: #e5f8ff;
+    }
+  }
+}
+
+.about {
+  position: relative;
+  background-color: #e5f8ff;
+  overflow: hidden;
+
+  &.full {
+    transition: background .5s ease-in;
+    background: #007fb3;
+  }
+
+  .container {
+    position: relative;
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  .section {
+
+    position: relative;
+    transition: all 1s ease;
+  }
+
+  &-head {
+    height: 565px;
+    position: relative;
+    padding-top: 160px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+    @include respond-to(t) {
+      height: 490px;
+      padding-top: 100px;
+    }
+
+    @include respond-to(lp) {
+      height: 580px;
+      padding-left: 13%;
+      padding-right: 13%;
+      padding-top: 200px;
+    }
+
+    @include respond-to(lg) {
+      padding-top: 350px;
+      height: 890px;
+    }
+  }
+
+  &__head-wrap {
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 75px;
+
+    @include respond-to(lp) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+
+  .filter-black {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(#000, 0.4);
+  }
+
+  .text-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include respond-to(lp) {
+      align-items: flex-start;
+    }
+  }
+
+  &__head-subheader {
+    font-size: 14px;
+    line-height: 2;
+    font-family: $MontSemiBold;
+    color: #e5f8ff;
+    text-transform: uppercase;
+
+    @include respond-to(t) {
+      font-size: 16px;
+    }
+
+    @include respond-to(lp) {
+      font-size: 18px;
+    }
+
+    @include respond-to(lg) {
+      font-size: 24px;
+    }
+  }
+
+  &__head-header {
+    font-size: 36px;
+    line-height: 1.5;
+    font-family: $MontExtraBold;
+    color: #fff;
+    margin-bottom: 75px;
+
+    @include respond-to(t) {
+      font-size: 50px;
+      margin-bottom: 20px;
+    }
+
+    @include respond-to(lp) {
+      font-size: 70px;
+    }
+
+    @include respond-to(lg) {
+      font-size: 96px;
+    }
+  }
+
+  &__head-textblock {
+    width: 280px;
+    height: 160px;
+    position: relative;
+
+    @include respond-to(t) {
+      width: 330px;
+      height: 175px;
+    }
+
+    @include respond-to(lp) {
+      width: 400px;
+      height: 250px;
+    }
+
+    @include respond-to(lg) {
+      width: 550px;
+      height: 340px;
+    }
+
+    &:after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: #007fb3;
+      position: absolute;
+      left: 15px;
+      top: 15px;
+
+      @include respond-to(lp) {
+        left: 25px;
+        top: 25px;
+      }
+    }
+  }
+
+  &__head-text {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+    padding: 20px 20px 20px 50px;
+    background-color: #fff;
+    color: #000;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: $MontSemiBold;
+    display: flex;
+    align-items: center;
+
+    @include respond-to(lp) {
+      font-size: 18px;
+      padding: 20px 20px 20px 70px;
+    }
+
+    @include respond-to(lg) {
+      font-size: 24px;
+    }
+  }
+
+  .workplace {
+
+    .workplace__item:nth-child(4) .color-bg:after,
+    .workplace__item:nth-child(5) .workplace-img:after {
+      background-color: #007fb3;
+    }
+
+    .workplace__items {
+      @include respond-to(lp) {
+        margin: 120px auto 150px;
+      }
+    }
+
+    .workplace-icon .icon-svg {
+      fill: #007fb3;
+    }
+  }
+
+  &-video {
+    padding: 100px 0 30px;
+    min-height: 530px;
+    display: block;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+
+      @include respond-to(lp) {
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        justify-content: center;
+      }
+    }
+
+    .text-wrap {
+      // width: 30%;
+
+      @include respond-to(t) {
+        width: 100%;
+      }
+
+      @include respond-to(lp) {
+        width: 30%;
+      }
+    }
+
+    &_header {
+      font-size: 22px;
+      line-height: 1.2;
+      font-family: $MontSemiBold;
+      margin-bottom: 35px;
+
+      @include respond-to(lp) {
+        font-size: 30px;
+      }
+
+      @include respond-to(lg) {
+        font-size: 40px;
+        margin-bottom: 60px;
+      }
+    }
+
+    &_text {
+      font-size: 13px;
+      line-height: 1.5;
+      font-family: $MontMedium;
+      margin-bottom: 35px;
+      text-align: center;
+      color: #a4a4a4;
+
+      @include respond-to(t) {
+        width: 60%;
+      }
+
+      @include respond-to(lp) {
+        width: 100%;
+        text-align: left;
+        padding-left: 40px;
+        font-size: 14px;
+      }
+
+      @include respond-to(lg) {
+        font-size: 18px;
+        padding-left: 0;
+      }
+    }
+
+    &_visual {
+      position: relative;
+      width: 275px;
+      height: 175px;
+
+      @include respond-to(t) {
+        width: 520px;
+        height: 320px;
+      }
+
+      @include respond-to(lp) {
+        margin-right: 100px;
+      }
+
+      @include respond-to(lg) {
+        width: 770px;
+        height: 480px;
+        margin-right: 200px;
+      }
+    }
+
+    .visual-video {
+      position: relative;
+      padding-bottom: 56.25%;
+      /* 16:9 */
+      padding-top: 25px;
+      height: 0;
+
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .visual-image {
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+  }
+
+  &-numberswrap {
+    @include respond-to(t) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @include respond-to(lp) {
+      width: 100%;
+    }
+  }
+
+  &-count {
+    padding: 30px 0 100px;
+    min-height: 900px;
+    display: block;
+
+    @include respond-to(lp) {
+      min-height: 670px;
+      padding: 30px 0 100px;
+    }
+
+    @include respond-to(lg) {
+      min-height: 800px;
+      padding: 30px 0 80px;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+
+      @include respond-to(lp) {
+        padding-right: 40%;
+        padding-left: 7%;
+        align-items: flex-start;
+      }
+
+      @include respond-to(lg) {
+        padding-right: 45%;
+        padding-left: 12%;
+      }
+    }
+
+    &_text {
+      font-size: 13px;
+      line-height: 1.5;
+      font-family: $MontMedium;
+      margin-bottom: 50px;
+      text-align: center;
+      color: #a4a4a4;
+
+      @include respond-to(t) {
+        width: 60%;
+      }
+
+      @include respond-to(lp) {
+        text-align: left;
+        font-size: 14px;
+        margin-bottom: 90px;
+      }
+
+      @include respond-to(lg) {
+        margin-top: 90px;
+        font-size: 18px;
+        width: 75%;
+      }
+    }
+
+    &_numbers {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      @include respond-to(lp) {
+        width: 100%;
+        flex-direction: row;
+        align-items: flex-start;
+      }
+    }
+
+    .number-block {
+      position: relative;
+      display: flex;
+      margin-bottom: 50px;
+      flex-direction: column;
+      justify-content: center;
+      width: 70%;
+
+      @include respond-to(t) {
+        width: 75%;
+      }
+    }
+
+    .one-number {
+      font-size: 50px;
+      line-height: 1.2;
+      font-family: $MontBold;
+
+      @include respond-to(lg) {
+        font-size: 70px;
+      }
+
+      span {
+        font-size: 22px;
+      }
+
+      &:before {
+        content: "";
+        width: 60px;
+        height: 2px;
+        background-color: #007FB3;
+        position: absolute;
+        top: -10px;
+        left: 0;
+      }
+    }
+
+    .one-text {
+      font-size: 13px;
+      line-height: 1.5;
+      font-family: $MontMedium;
+      width: 80%;
+
+      @include respond-to(lp) {
+        font-size: 14px;
+        width: 60%;
+      }
+
+      @include respond-to(lg) {
+        width: 90%;
+        font-size: 18px;
+      }
+    }
+
+    &_imgwrap {
+      width: 260px;
+      height: 300px;
+      position: relative;
+
+      @include respond-to(t) {
+        width: 320px;
+        height: 380px;
+      }
+
+      @include respond-to(lp) {
+        position: absolute;
+        top: -35px;
+        right: 0;
+        width: 420px;
+        height: 560px;
+      }
+
+      @include respond-to(lg) {
+        width: 520px;
+        height: 625px;
+        right: 8%;
+      }
+
+      &:after {
+        content: "";
+        width: 95%;
+        height: 100%;
+        background: #007fb3;
+        position: absolute;
+        left: 15px;
+        bottom: 15px;
+
+        @include respond-to(lp) {
+          left: 25px;
+          bottom: 25px;
+        }
+      }
+    }
+
+    &_img {
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      position: absolute;
+      width: 95%;
+      height: 100%;
+      z-index: 1;
+    }
+  }
+
+  .faq {
+    padding: 90px 0 150px;
+    background-color: #007fb3;
+    color: #fff;
+
+    @include respond-to(t) {
+      padding: 120px 0 200px;
+    }
+
+    .container {
+      @include respond-to(lp) {
+        display: flex;
+        justify-content: center;
+      }
+
+      @include respond-to(lg) {
+        width: 80%;
+      }
+    }
+
+    .text-faq_wrap {
+      @include respond-to(lp) {
+        width: 40%;
+        padding-top: 25px;
+      }
+    }
+
+    &-header {
+      text-align: center;
+      font-size: 30px;
+      font-family: $MontSemiBold;
+      line-height: 1.2;
+      margin-bottom: 25px;
+
+      @include respond-to(lp) {
+        text-align: left;
+      }
+
+      @include respond-to(lg) {
+        font-size: 40px;
+      }
+    }
+
+    &-subheader {
+      text-align: center;
+      font-size: 14px;
+      font-family: $MontMedium;
+      line-height: 1.5;
+      opacity: 0.7;
+      margin-bottom: 30px;
+
+      @include respond-to(t) {
+        width: 60%;
+        margin: 0 auto 30px;
+        font-size: 16px;
+      }
+
+      @include respond-to(lp) {
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding-right: 100px;
+      }
+    }
+
+    &__list-wrap {
+      position: relative;
+
+      @include respond-to(lp) {
+        width: 60%;
+      }
+    }
+
+    &__listitem {
+      position: relative;
+      transition: all 1s ease;
+      padding-top: 25px;
+      display: none;
+      cursor: pointer;
+
+      &.default-visible {
+        display: block;
+      }
+
+      &.is-visible {
+        display: block;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: -7%;
+        width: 115%;
+        height: 2px;
+        opacity: 0.15;
+        background-color: #fff;
+
+        @include respond-to(t) {
+          left: 0;
+          width: 100%;
+        }
+      }
+
+      &.is-active {
+        .arrow-less {
+          transform: rotateZ(0deg);
+        }
+
+        .text-wrap {
+          max-height: 500px;
+          transition: max-height 0.5s ease;
+        }
+      }
+    }
+
+    .arrow-less {
+      stroke: #fff;
+      transform: rotateZ(180deg);
+      transition: all 0.7s ease;
+      stroke-width: 2px;
+      position: absolute;
+      right: 10px;
+      top: 35px;
+    }
+
+    .text-wrap {
+      max-height: 0;
+      transition: max-height 0.5s ease;
+      overflow: hidden;
+    }
+
+    &__listitem-header {
+      padding-right: 50px;
+      font-size: 16px;
+      font-family: $MontSemiBold;
+      line-height: 1.5;
+      margin-bottom: 25px;
+      position: relative;
+
+      @include respond-to(t) {
+        font-size: 18px;
+      }
+
+      @include respond-to(lp) {
+        font-size: 22px;
+      }
+    }
+
+    &__listitem-text {
+      font-size: 14px;
+      font-family: $MontRegular;
+      letter-spacing: 1px;
+      line-height: 1.5;
+      margin-bottom: 30px;
+      opacity: 0.7;
+    }
+
+    &-btn.btn-w {
+      margin: 40px 0 0;
+      border: 2px solid #fff;
+      color: #fff;
+      @include position(centerX);
+
+      @include respond-to(t) {
+        margin: 65px 0 0;
+      }
+
+      @include respond-to(lp) {
+        left: 0;
+        top: 120px;
+        transform: none;
+      }
+    }
+  }
+}

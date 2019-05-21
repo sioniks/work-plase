@@ -1,0 +1,451 @@
+.page-prices {
+
+  //============================= colors theme start
+  .header__wrap,
+  .footer-top,
+  .footer-center {
+    background: #EFFFF5;
+  }
+
+  .footer {
+    background: #E7F7ED;
+  }
+
+  .price__nav-text {
+    background: #8BD2A4;
+  }
+
+  .price__card {
+    background: #B4EAC7;
+  }
+
+  .price__card.more:nth-child(odd),
+  .price__card.four-card:nth-child(3n+1),
+  .price__card.two-card:nth-child(odd),
+  .price__card.one-card:nth-child(odd),
+  .price__card.three-card:nth-child(odd) {
+    background: #9DDFB4;
+  }
+
+  //B4EAC7
+  //9DDFB4
+
+  //============================= colors theme end
+}
+
+.prices {
+
+
+  &__wrap {
+    overflow: hidden;
+    height: auto;
+  }
+
+  .filter-black {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(#000, .3);
+  }
+
+  &-head {
+    height: 590px;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: hidden;
+
+    @include respond-to(lp) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding: 0 90px 90px;
+    }
+
+    @include respond-to(lg) {
+      height: 890px;
+      padding: 0 150px 150px;
+    }
+  }
+
+  &__title-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+
+    @include respond-to(lp) {
+      width: 40%;
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    @include respond-to(lg) {
+      width: 50%;
+    }
+  }
+
+  &__title-supheader {
+    font-size: 14px;
+    line-height: 2;
+    font-family: $MontSemiBold;
+    margin-bottom: 10px;
+    color: #EFFFF5;
+
+    @include respond-to(t) {
+      font-size: 16px;
+    }
+
+    @include respond-to(lp) {
+      font-size: 18px;
+    }
+
+    @include respond-to(lg) {
+      font-size: 24px;
+    }
+  }
+
+  &__title-header {
+    font-size: 36px;
+    line-height: 1.3;
+    font-family: $MontExtraBold;
+    margin-bottom: 30px;
+    color: #fff;
+
+    @include respond-to(t) {
+      font-size: 50px;
+    }
+
+    @include respond-to(lp) {
+      font-size: 70px;
+    }
+
+    @include respond-to(lg) {
+      font-size: 96px;
+      margin-bottom: 80px;
+    }
+  }
+
+  &__info-block {
+    width: 290px;
+    height: 200px;
+    background: #fff;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 20px;
+    margin-bottom: 90px;
+
+    @include respond-to(t) {
+      width: 380px;
+      height: 200px;
+    }
+
+    @include respond-to(lp) {
+      margin: 0;
+      width: 40%;
+    }
+
+    @include respond-to(lg) {
+      width: 550px;
+      height: 280px;
+    }
+  }
+
+  &__info-text {
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: $MontSemiBold;
+    margin-bottom: 20px;
+  }
+
+  .price {
+    background: #EFFFF5;
+    padding: 80px 20px 0;
+    position: relative;
+
+    @include respond-to(t) {
+      padding: 80px 60px 0;
+    }
+
+    @include respond-to(lp) {
+      flex-direction: column;
+      height: auto;
+      padding: 80px 60px;
+    }
+
+    @include respond-to(lg) {
+      padding: 80px 160px;
+    }
+
+    &__section-header {
+      font-size: 22px;
+      line-height: 1.3;
+      font-family: $MontSemiBold;
+      text-align: center;
+
+      @include respond-to(t) {
+        font-size: 30px;
+      }
+
+      @include respond-to(lp) {
+        width: 1120px;
+        margin: 0 auto;
+        text-align: left;
+      }
+
+      @include respond-to(lg) {
+        width: 100%;
+      }
+    }
+
+    .dropdown-wrap {
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      @include respond-to(t) {
+        height: 150px;
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      @include respond-to(lp) {
+        justify-content: flex-start;
+        margin-bottom: 55px;
+        width: 1120px;
+        margin: 0 auto;
+      }
+
+      @include respond-to(lg) {
+        width: 100%;
+      }
+    }
+
+    .drop-title {
+      text-transform: uppercase;
+      opacity: .3;
+      font-size: 12px;
+      line-height: 1.5;
+      font-family: $MontBold;
+      min-width: 80px;
+
+      @include respond-to(lg) {
+        font-size: 16px;
+      }
+    }
+
+    .custom-option {
+      @include respond-to(lg) {
+        font-size: 20px;
+      }
+    }
+
+    .active-drop-item {
+      text-transform: capitalize;
+      font-family: $MontSemiBold;
+      position: relative;
+      min-width: 150px;
+      width: auto;
+      display: block;
+      padding-right: 10px;
+      font-size: 13px;
+      cursor: pointer;
+
+      @include respond-to(lp) {
+        font-size: 15px;
+      }
+
+      @include respond-to(lg) {
+        font-size: 20px;
+      }
+
+      &.is-open {
+        &:after {
+          margin-top: 3px;
+          transform: rotate(-135deg) translateY(-50%);
+        }
+      }
+
+      &:after {
+        position: absolute;
+        display: block;
+        content: '';
+        width: 7px;
+        height: 7px;
+        top: 50%;
+        right: -10px;
+        margin-top: -3px;
+        border-bottom: 2px solid #000;
+        border-right: 2px solid #000;
+        transform: rotate(45deg) translateY(-50%);
+        transition: all .4s ease-in-out;
+        transform-origin: 50% 0;
+      }
+    }
+
+    .take-city {
+      display: flex;
+      align-items: center;
+      position: relative;
+      z-index: 21;
+
+      @include respond-to(t) {
+        padding-right: 50px;
+
+        &:after {
+          content: '';
+          height: 30px;
+          width: 2px;
+          background: rgba(#000, .1);
+          position: absolute;
+          right: 0;
+          bottom: 60px;
+        }
+      }
+
+
+
+      .city {
+        margin: 15px 0;
+        width: 150px;
+      }
+    }
+
+    .take-location {
+      display: flex;
+      align-items: center;
+      position: relative;
+      z-index: 20;
+
+      @include respond-to(t) {
+        width: 50%;
+        padding: 0 0 0 50px;
+      }
+
+      .location {
+        margin: 15px 0;
+        width: 200px;
+      }
+
+      .custom-select-trigger {
+        width: 200px;
+      }
+    }
+
+    &__wrap {
+      margin-bottom: 250px;
+      min-height: 410px;
+      position: relative;
+
+      @include respond-to(lp) {
+        margin-bottom: 150px;
+      }
+    }
+
+    .sliders__wrap {
+      height: 410px;
+
+      @include respond-to(lg) {
+        height: 600px;
+      }
+    }
+
+    .sub-price {
+      position: absolute;
+      bottom: -40px;
+      left: 50%;
+      transform: translate(-50%);
+      font-size: 14px;
+      width: 100%;
+      text-align: center;
+      opacity: .3;
+      font-family: $MontSemiBold;
+
+      @include respond-to(lp) {
+        text-align: right;
+        width: 1120px;
+      }
+
+      @include respond-to(lg) {
+        font-size: 18px;
+        width: 1600px;
+      }
+    }
+
+    .prices__btn-b {
+      position: absolute;
+      bottom: 20px;
+      padding: 0;
+      width: 280px;
+      left: 50%;
+      transform: translate(-50%, 0);
+
+      @include respond-to(lp) {
+        bottom: 80px;
+      }
+
+
+    }
+
+    .select-link-wrapper {
+      position: relative;
+      margin: 15px 0;
+      min-width: 200px;
+      width: auto;
+      padding-left: 20px;
+      padding-right: 10px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: left;
+    }
+
+    .options-drop {
+      position: absolute;
+      display: block;
+      top: 100%;
+      padding-inline-start: 0;
+      left: 0;
+      right: 0;
+      min-width: 100%;
+      text-transform: uppercase;
+      border: none;
+      box-sizing: border-box;
+      box-shadow: 0 2px 1px rgba(0, 0, 0, .07);
+      background: #fff;
+      transition: all .4s ease-in-out;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transform: translateY(-15px);
+
+      &.is-open {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+        transform: translateY(0);
+      }
+    }
+  }
+
+
+
+
+}

@@ -1,0 +1,415 @@
+.viewing-page-1 {
+  .header__wrap {
+    background: $main-bg1;
+  }
+
+}
+
+.viewing-page-2 {
+  .header__wrap {
+    background: $main-bg2;
+  }
+
+
+}
+
+.viewing-page-3 {
+  .header__wrap {
+    background: $main-bg4;
+  }
+}
+
+.viewing-page-4 {
+  .header__wrap {
+    background: $main-bg3;
+  }
+}
+
+.viewing-page-5 {
+  .header__wrap {
+    background: $main-bg5;
+  }
+}
+
+.header {
+  height: 72px;
+  width: 100%;
+  position: fixed;
+  z-index: 25;
+  top: 0;
+  left: 0;
+
+  @include respond-to(lg) {
+    height: 80px;
+  }
+
+
+  &__wrap {
+    height: 100%;
+    max-width: 100%;
+    padding: 0 25px;
+    background: $main-bg1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 1s all cubic-bezier(0.25, 0.1, 0.2, 1);
+
+    @include respond-to(lp) {
+      padding: 0 20px;
+    }
+
+    &.s1 {
+      #logo-text {
+        @include respond-to(lp) {
+          transform: translate(0%, 0%);
+        }
+      }
+
+      .open-form.tablet-form {
+        @include respond-to(t) {
+          transform: translate(150%, -50%);
+        }
+      }
+
+      .header__menu {
+        @include respond-to(lp) {
+          left: 200px;
+          width: calc(100vw - 240px);
+        }
+
+        @include respond-to(lg) {
+          left: 250px;
+          width: calc(100vw - 290px);
+        }
+      }
+
+      .open-form.mobile-form {
+        @include respond-to(lp) {
+          right: -350px;
+        }
+      }
+
+      .take-city {
+        @include respond-to(lp) {
+          right: 50px;
+        }
+      }
+
+      .take-lang {
+        @include respond-to(lp) {
+          right: 200px;
+        }
+      }
+    }
+
+    &.full {
+      .menu-link:after {
+        background: #fff;
+      }
+    }
+
+  }
+
+  .logo {
+    width: 40px;
+    height: 40px;
+
+    @include respond-to(lp) {
+      width: 170px;
+    }
+
+    &-icon {
+      @include bg-svg($logo-icon);
+    }
+
+    &-text {
+      display: none;
+
+      @include respond-to(t) {
+        display: block;
+        height: 17px;
+        width: 115px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-38%);
+        left: 70px;
+        overflow: hidden;
+      }
+
+      @include respond-to(lp) {
+        transform: translateY(-30%);
+        left: 70px;
+      }
+
+      @include respond-to(lg) {
+        height: 40px;
+        width: 170px;
+        padding-top: 5px;
+        transform: translateY(-35%);
+      }
+    }
+  }
+
+  #logo-text {
+    @include respond-to(lp) {
+      transform: translate(-150%, 0%);
+      transition: 1s all ease;
+    }
+  }
+
+  .take-city {
+    position: absolute;
+    right: 75px;
+    top: 0;
+
+    @include respond-to(lp) {
+      margin: 0;
+      bottom: unset;
+      top: 50%;
+      right: 280px;
+      transition: all .8s ease;
+      transform: translateY(-50%);
+    }
+
+    .city {
+      margin: 20px 0;
+    }
+  }
+
+  .take-lang {
+    display: none;
+
+    @include respond-to(lp) {
+      display: block;
+      position: absolute;
+      margin: 0 10px 0 0;
+      bottom: unset;
+      top: 50%;
+      right: 400px;
+      transition: all .8s ease;
+      transform: translateY(-50%);
+    }
+  }
+
+  .menu__mobile-open {
+    width: 40px;
+    height: 40px;
+    @include bg-svg($mob-menu);
+
+    @include respond-to(lp) {
+      display: none;
+    }
+  }
+
+  .menu__mobile-close {
+    width: 40px;
+    height: 40px;
+    @include bg-svg($close);
+
+    @include respond-to(lp) {
+      display: none;
+    }
+  }
+
+  &__menu {
+    width: 0;
+    height: calc(100vh - 20px);
+    position: absolute;
+    overflow: hidden;
+    top: 10px;
+    left: 10px;
+    z-index: 100;
+    background: $main-bg1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 30px;
+    transition: all .3s ease;
+    opacity: 0;
+    visibility: hidden;
+
+    @include respond-to(lp) {
+      width: calc(100vw - 110px);
+      height: 100%;
+      top: 0;
+      left: 70px;
+      transform: translateX(0);
+      transition: all 1s ease;
+      flex-direction: row;
+      background: transparent;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 0;
+      overflow: unset;
+      font-size: 15px;
+      opacity: 1;
+      visibility: visible;
+
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 10px;
+        width: 2px;
+        height: 40px;
+        top: 21px;
+        background: rgba(#000, .1);
+      }
+    }
+
+    &.open {
+      // transform: translateX(0);
+      width: calc(100vw - 20px);
+      opacity: 1;
+      visibility: visible;
+
+      // transform: matrix(1, 0, 0, 1, 0, 0);
+    }
+  }
+
+  .menu-link {
+    line-height: 2.5;
+    font-size: 16px;
+    font-family: $MontSemiBold;
+    position: relative;
+
+    @include respond-to(t) {
+      font-size: 30px;
+    }
+
+    @include respond-to(lp) {
+      font-size: 15px;
+      margin-left: 40px;
+      line-height: 1.7;
+      cursor: pointer;
+
+      &:after {
+        position: absolute;
+        content: "";
+        display: block;
+        height: 2px;
+        transition: width .2s;
+        background: #000;
+        width: 0;
+        left: auto;
+        right: 0;
+        bottom: 0;
+      }
+
+      &:hover {
+        &::after {
+          left: 0;
+          width: 100%;
+        }
+      }
+    }
+
+    @include respond-to(lg) {
+      font-size: 18px;
+      margin-left: 60px;
+    }
+
+  }
+
+  .mobile__header-top {
+    padding: 0 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    @include respond-to(lp) {
+      display: none;
+    }
+  }
+
+  .mobile__lang {
+    position: absolute;
+    bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 100%;
+    text-transform: capitalize;
+    color: $header-color;
+    font-size: 16px;
+    font-family: $MontSemiBold;
+
+    @include respond-to(t) {
+      bottom: 90px;
+      font-size: 18px;
+    }
+
+    @include respond-to(lp) {
+      display: none;
+    }
+
+    .lang-item {
+      margin: 0 20px;
+      opacity: .3;
+
+      &.active {
+        opacity: 1;
+      }
+    }
+  }
+
+  .open-form.mobile-form {
+    margin: 20px 0 0;
+    display: block;
+
+    @include respond-to(t) {
+      display: none;
+    }
+
+    @include respond-to(lp) {
+      position: absolute;
+      display: block;
+      margin: 0;
+      transition: all 1s ease;
+      bottom: unset;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      padding: 0 15px;
+      min-width: 230px;
+      height: 45px;
+      line-height: 45px;
+      font-size: 13px;
+    }
+  }
+
+  .open-form.tablet-form {
+    display: none;
+
+    @include respond-to(t) {
+      position: absolute;
+      display: block;
+      margin: 0;
+      transition: all 1s ease;
+      bottom: unset;
+      top: 50%;
+      right: 110px;
+      transform: translate(0, -50%);
+      padding: 0 15px;
+      min-width: 230px;
+      height: 45px;
+      line-height: 45px;
+      font-size: 13px;
+    }
+
+    @include respond-to(lp) {
+      display: none;
+    }
+  }
+}
+
+
+//lang

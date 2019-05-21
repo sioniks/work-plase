@@ -1,0 +1,16 @@
+<a href='{{link}}' class="locations-link">
+  <div class="block block-left">
+    <div class="locations-title">
+      <div class="locations-number">01</div>
+      <div class="locations-name">{{ text }}</div>
+    </div>
+  </div>
+  <div class="block block-right">
+    <picture class="block-img">
+      <source srcset="./static/img/content/main/{{mob-img}}" media="(max-width: 767px)">
+      <source srcset="./static/img/content/main/{{def-img}}">
+      <img src="./static/img/content/main/{{def-img}}" alt="default-image">
+    </picture>
+  </div>
+
+</a>

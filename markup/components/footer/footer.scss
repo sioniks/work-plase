@@ -1,0 +1,662 @@
+// .viewing-page-5 {
+//   .footer {
+//     z-index: 5;
+//     transform: translateY(0);
+//     background: #EEE6FE;
+//   }
+// }
+
+.page-home {
+  .footer-full {
+    @include respond-to(lp) {
+      position: absolute;
+      transform: translateY(95px);
+      transition: all .7s ease;
+    }
+  }
+
+  &.viewing-page-5 {
+    @include respond-to(lp) {
+      .footer-full {
+        z-index: 5;
+        transform: translateY(0);
+        background: #EEE6FE;
+      }
+    }
+  }
+}
+
+.footer {
+  height: 265px;
+  padding: 40px 40px 0;
+  position: relative;
+  transition: all .7s ease;
+  bottom: 0;
+  left: 0;
+
+  @include respond-to(t) {
+    width: 100%;
+    height: 65px;
+    padding: 0 0 0 15px;
+    flex-direction: row;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @include respond-to(lp) {
+    transform: translateY(95px);
+    position: absolute;
+    padding: 0 50px;
+    justify-content: flex-start;
+  }
+
+  &-text {
+    font-family: $MontMedium;
+    font-size: 13px;
+    line-height: 2;
+    color: rgba($header-color, 0.2);
+    margin-bottom: 30px;
+    text-align: center;
+
+    @include respond-to(lg) {
+      font-size: 16px;
+    }
+
+    a {
+      font-family: $MontMedium;
+      font-size: 12px;
+      line-height: 2;
+      color: rgba($header-color, 0.2);
+      margin-bottom: 0;
+      text-align: center;
+      display: block;
+
+      @include respond-to(t) {
+        display: inline;
+        margin-right: 5px;
+      }
+
+      @include respond-to(lp) {
+        margin-right: 20px;
+        font-size: 14px;
+      }
+
+      @include respond-to(lg) {
+        font-size: 16px;
+        margin-right: 10px;
+      }
+    }
+
+    // &.t1 {
+
+    //   // width: 37%;
+    //   span {
+    //     display: block;
+
+    //     @include respond-to(t) {
+    //       display: inline;
+    //     }
+    //   }
+    // }
+
+    // &.t2 {
+    //   a {
+    //     font-family: $MontMedium;
+    //     font-size: 12px;
+    //     line-height: 2;
+    //     color: rgba($header-color, 0.2);
+    //     margin-bottom: 0;
+    //     text-align: center;
+    //     display: block;
+
+    //     @include respond-to(t) {
+    //       display: inline;
+    //       margin-right: 5px;
+    //     }
+
+    //     @include respond-to(lp) {
+    //       margin-right: 20px;
+    //     }
+
+    //     @include respond-to(lg) {
+    //       font-size: 16px;
+    //       margin-right: 10px;
+    //     }
+    //   }
+    // }
+  }
+
+  // .logo-facility {
+  //   @include respond-to(t) {
+  //     width: 138px;
+  //   }
+
+  //   span {
+  //     @include bg-svg($fac-logo);
+  //     display: block;
+
+  //     @include respond-to(t) {
+  //       transform: scale(.65);
+  //     }
+
+  //     @include respond-to(lg) {
+  //       transform: scale(.85);
+  //     }
+  //   }
+
+  //   @include respond-to(lp) {
+  //     height: 15px;
+  //     @include position(centerY);
+  //     right: 50px;
+  //   }
+
+  // }
+
+  //=========================================== start big footer 
+  &-full {
+    height: auto;
+    padding: 0;
+
+    @include respond-to(lp) {
+      position: relative;
+      transform: none;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .-container {
+      @include respond-to(t) {
+        width: 670px;
+        margin: 0 auto;
+        display: flex;
+      }
+
+      @include respond-to(lp) {
+        height: 100%;
+      }
+    }
+
+    .footer-top {
+      @include respond-to(lp) {
+        width: 58%;
+        height: 210px;
+      }
+
+      @include respond-to(lg) {
+        width: 65%;
+      }
+
+      .-container {
+        align-items: center;
+        flex-direction: column;
+        padding: 60px 35px 10px;
+
+        @include respond-to(t) {
+          align-items: start;
+          flex-direction: row;
+          padding: 60px 0 10px;
+        }
+
+        @include respond-to(lp) {
+          width: 638px;
+          margin-right: 0;
+          padding: 40px 0 34px;
+        }
+
+        @include respond-to(lg) {
+          width: 1075px;
+        }
+      }
+
+
+
+      &_item {
+        &.faq {
+          min-height: 60px;
+          text-align: center;
+
+          @include respond-to(t) {
+            width: 25%;
+            text-align: left;
+          }
+
+          @include respond-to(lp) {
+            width: 13%;
+          }
+
+          .footer-title {
+            text-transform: uppercase;
+          }
+        }
+
+        &.contact {
+          text-align: center;
+          margin-bottom: 20px;
+
+          @include respond-to(t) {
+            width: 45%;
+            text-align: left;
+          }
+
+          @include respond-to(lp) {
+            width: 40%;
+          }
+
+          .footer-title {
+            margin-bottom: 20px;
+          }
+
+          .contact-item {
+            margin-bottom: 20px;
+          }
+        }
+
+        &.social {
+          @include respond-to(t) {
+            width: 30%;
+            text-align: right;
+          }
+
+          .footer-title {
+            margin-bottom: 20px;
+
+            @include respond-to(t) {
+              text-align: right;
+            }
+          }
+        }
+      }
+
+      .footer-title {
+        font-family: $MontSemiBold;
+        font-size: 13px;
+        text-align: center;
+
+        @include respond-to(t) {
+          text-align: left;
+        }
+
+        @include respond-to(lp) {
+          font-size: 14px;
+
+        }
+
+        @include respond-to(lg) {
+          font-size: 18px;
+        }
+
+      }
+
+      .contact-item {
+        color: #9B9B9B;
+        font-family: $MontSemiBold;
+        font-size: 13px;
+        display: inherit;
+
+        @include respond-to(lp) {
+          font-size: 14px;
+        }
+
+        @include respond-to(lg) {
+          font-size: 18px;
+        }
+      }
+
+      .social-block {
+        display: flex;
+        justify-content: center;
+
+        @include respond-to(t) {
+          justify-content: flex-end;
+        }
+      }
+
+      .social-icon {
+        width: 40px;
+        height: 40px;
+        margin-right: 1px;
+        background: #000;
+        position: relative;
+        transition: all .5s ease;
+
+        &:hover {
+          opacity: .7;
+        }
+
+        @include respond-to(lg) {
+          width: 50px;
+          height: 50px;
+        }
+
+      }
+
+      .social-link {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+      }
+
+      .icon-svg {
+        width: 12px;
+        height: 12px;
+        @include position(center);
+
+        @include respond-to(lg) {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+
+    .footer-center {
+      @include respond-to(lp) {
+        width: 42%;
+        height: 210px;
+      }
+
+      @include respond-to(lg) {
+        width: 35%;
+      }
+
+      .-container {
+        height: auto;
+        position: relative;
+        padding: 40px 35px 60px;
+        align-items: center;
+        flex-direction: column;
+
+        @include respond-to(t) {
+          flex-direction: row;
+          padding: 40px 0 60px;
+        }
+
+        @include respond-to(lp) {
+          flex-wrap: wrap;
+          width: 433px;
+          margin-left: 0;
+        }
+
+        @include respond-to(lg) {
+          width: 500px;
+        }
+      }
+
+      .form-block {
+        // padding: 0px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include respond-to(t) {
+          width: 75%;
+          flex-direction: row;
+          align-items: flex-start;
+        }
+
+        @include respond-to(lp) {
+          width: 100%;
+        }
+
+
+
+      }
+
+      .subscribe {
+        &-title {
+          font-size: 12px;
+          font-family: $MontSemiBold;
+          margin-bottom: 20px;
+          text-align: center;
+
+          @include respond-to(t) {
+            text-align: left;
+            width: 25%;
+          }
+
+          @include respond-to(lp) {
+            width: 100%;
+            font-size: 14px;
+          }
+
+          @include respond-to(lg) {
+            font-size: 18px;
+          }
+        }
+
+        &__wrap-input {
+          position: relative;
+          margin-bottom: 0;
+
+          @include respond-to(lp) {
+            margin-right: 0;
+          }
+
+          &.has-error {
+            .some-error {
+              visibility: visible;
+              opacity: 1;
+            }
+
+            .subscribe__mail-input {
+              border: 2px solid #E82D2D;
+            }
+          }
+
+          .some-error {
+            position: relative;
+            display: block;
+            visibility: hidden;
+            opacity: 0;
+            bottom: 0;
+            left: 0;
+            font-size: 14px;
+            font-family: $MontSemiBold;
+            color: #E82D2D;
+            transition: all .5s ease;
+
+            @include respond-to(lp) {
+              position: absolute;
+              bottom: -20px;
+            }
+          }
+        }
+
+        &__mail-input {
+          font-family: $MontSemiBold;
+          font-size: 15px;
+          line-height: 1;
+          padding: 0 18px;
+          min-width: 260px;
+          height: 56px;
+          // line-height: 63px;
+          text-align: center;
+          position: relative;
+          cursor: pointer;
+          // text-transform: uppercase;
+          display: inline-block;
+          border: 2px solid #d7d7d7;
+          background: transparent;
+          appearance: none;
+          border-radius: 0;
+
+          @include respond-to(t) {
+            width: 340px;
+            margin-right: 5px;
+            text-align: left;
+          }
+
+          @include respond-to(lp) {
+            width: 260px;
+          }
+
+          @include respond-to(lg) {
+            width: 330px;
+          }
+
+          &::placeholder {
+            color: #d7d7d7;
+            // text-transform: uppercase;
+          }
+
+          &:active,
+          &:focus {
+            text-transform: lowercase;
+            border: 2px solid #8A8A8A;
+
+            &::placeholder {
+              opacity: 0;
+            }
+          }
+        }
+
+        &__mail-link {
+          height: 56px;
+          width: 200px;
+
+          @include respond-to(t) {
+            width: 160px;
+
+          }
+
+          @include respond-to(lg) {
+            width: 165px;
+          }
+        }
+      }
+
+
+    }
+
+    .footer-bottom {
+      // background: #F4EDE9;
+
+      @include respond-to(lp) {
+        width: 100%;
+      }
+
+      .-container {
+        height: auto;
+        padding: 40px 25px;
+
+        @include respond-to(t) {
+          flex-direction: row;
+          flex-wrap: wrap;
+          padding: 25px 0;
+        }
+
+        @include respond-to(lp) {
+          align-items: center;
+          width: 1070px;
+        }
+
+        @include respond-to(lg) {
+          width: 1575px;
+        }
+      }
+
+      .footer-text {
+        @include respond-to(t) {
+          margin-bottom: 0;
+        }
+
+        @include respond-to(lp) {
+          margin-bottom: 0;
+          font-size: 14px;
+        }
+
+        @include respond-to(lg) {
+          font-size: 18px;
+        }
+
+        a {
+          @include respond-to(lp) {
+            font-size: 14px;
+          }
+
+          @include respond-to(lg) {
+            font-size: 18px;
+          }
+        }
+
+        span {
+          display: inline-block;
+        }
+
+        &.t1 {
+          position: relative;
+
+          @include respond-to(t) {
+            width: 43%;
+
+            &:after {
+              content: '';
+              display: block;
+              height: 12px;
+              width: 1px;
+              background: rgba($header-color, 0.2);
+              @include position(centerY);
+              right: 0;
+            }
+          }
+
+          @include respond-to(lp) {
+            width: 30%;
+            text-align: left;
+          }
+
+
+        }
+
+        &.t2 {
+          @include respond-to(t) {
+            width: 57%;
+          }
+
+          @include respond-to(lp) {
+            width: 55%;
+            padding-left: 25px;
+            text-align: left;
+          }
+        }
+      }
+
+      .logo-facility {
+        text-align: center;
+        margin-top: 30px;
+        width: 100%;
+
+        @include respond-to(lp) {
+          width: 15%;
+          margin-top: 0;
+          text-align: right;
+        }
+
+        @include respond-to(lg) {
+          margin-top: 10px;
+        }
+
+        .icon-svg {
+          width: 140px;
+          height: 15px;
+          fill: rgba($header-color, 0.2);
+
+          @include respond-to(lp) {
+            width: 152px;
+            height: 20px;
+          }
+
+          @include respond-to(lg) {
+            width: 180px;
+            height: 40px;
+          }
+        }
+      }
+    }
+  }
+
+  //====== end big footer 
+
+}

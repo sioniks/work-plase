@@ -1,0 +1,696 @@
+.section {
+  height: auto;
+  // min-height: 100vh;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+
+  &__wrap {
+    height: auto;
+
+    @include respond-to(lp) {
+      height: 100vh;
+    }
+  }
+
+  &-h3 {
+    font-family: $MontExtraBold;
+    font-size: 30px;
+    line-height: 1.4;
+    letter-spacing: .6px;
+    text-align: center;
+
+    @include respond-to(t) {
+      font-size: 38px;
+    }
+
+    @include respond-to(lp) {
+      text-align: left;
+      font-size: 48px;
+    }
+  }
+
+  &-text {
+    font-family: $MontMedium;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+    color: #4A4A4A;
+
+    @include respond-to(t) {
+      font-size: 16px;
+    }
+
+    @include respond-to(lp) {
+      text-align: left;
+    }
+  }
+
+  .block {
+    width: 100%;
+    min-height: 565px;
+    height: auto;
+    margin: 0;
+    padding: 0 20px;
+    position: relative;
+
+    @include respond-to(t) {
+      min-height: 500px;
+    }
+
+  }
+
+  .block-left {
+    @include respond-to(t) {
+      height: 580px;
+    }
+
+    @include respond-to(lp) {
+      width: 40%;
+      height: 100%;
+      padding: 0 0 0 105px;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    @include respond-to(lg) {
+      width: 35%;
+    }
+
+  }
+
+  .block-right {
+
+    @include respond-to(t) {
+      height: 500px;
+    }
+
+    @include respond-to(lp) {
+      width: 60%;
+      height: 100%;
+    }
+
+    @include respond-to(lg) {
+      width: 65%;
+    }
+
+  }
+
+}
+
+.anim__wrap {
+  transition: background .5s ease-in;
+}
+
+//----------------col
+.col-s {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.col-c {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.col-e {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.col-sb {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.col-sa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+//----------------row
+.row-s {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.row-c {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.row-e {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.row-sb {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.row-sa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.workplace {
+  min-height: 790px;
+
+  @include respond-to(lg) {
+    min-height: 1190px;
+  }
+
+  &__wrap {
+    position: relative;
+    width: 100%;
+  }
+
+  &-header {
+    font-family: $MontSemiBold;
+    font-size: 22px;
+    line-height: 2;
+    color: #000000;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+
+    @include respond-to(lp) {
+      font-size: 30px;
+      margin-left: 30px;
+      text-align: left;
+    }
+
+    @include respond-to(lg) {
+      font-size: 40px;
+      margin-left: 60px;
+    }
+
+  }
+
+  &__items {
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+
+    @include respond-to(t) {
+      width: 510px;
+      margin: 60px auto 150px;
+    }
+
+    @include respond-to(lp) {
+      width: 1150px;
+      justify-content: center;
+      left: 50px;
+    }
+
+    @include respond-to(lg) {
+      width: 1440px;
+      margin: 150px auto;
+      left: 90px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    width: 50%;
+    height: 120px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    @include respond-to(t) {
+      height: 170px;
+    }
+
+    @include respond-to(lp) {
+      height: 175px;
+      width: 240px;
+
+    }
+
+    @include respond-to(lg) {
+      height: 260px;
+      width: 360px;
+    }
+
+    &:nth-child(2) {
+      .workplace-img {
+        width: 100%;
+        height: 120%;
+        bottom: 0;
+        left: 0;
+      }
+    }
+
+    .color-bg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+    &:nth-child(4) {
+      .wrap {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        z-index: 1;
+      }
+
+      .color-bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+
+        @include respond-to(lp) {
+          &:after {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            top: -10px;
+            right: -10px;
+            background-color: #D25D30;
+          }
+        }
+      }
+
+    }
+
+    &:nth-child(5) {
+      z-index: 2;
+
+      .workplace-img {
+        width: 105%;
+        height: 100%;
+        right: 0;
+        bottom: 0;
+
+        @include respond-to(lp) {
+          width: 350px;
+          height: 230px;
+          bottom: unset;
+          top: 0;
+        }
+
+        @include respond-to(lg) {
+          width: 520px;
+          height: 330px;
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          z-index: -1;
+          width: 100%;
+          height: 100%;
+          top: 10px;
+          right: 10px;
+          background-color: #D25D30;
+        }
+      }
+    }
+
+    &:nth-child(10) {
+      .workplace-img {
+        width: 100%;
+        height: 120%;
+        left: 0;
+        top: 0;
+      }
+    }
+  }
+
+  &-img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    position: absolute;
+  }
+
+  &-icon {
+    margin-bottom: 20px;
+
+    .icon-svg {
+      fill: #DD7C56;
+      width: 30px;
+      height: 30px;
+
+      @include respond-to(t) {
+        height: 38px;
+        width: 38px;
+      }
+
+      @include respond-to(lg) {
+        height: 50px;
+        width: 50px;
+      }
+    }
+  }
+
+  &-text {
+    height: 30%;
+    width: 80%;
+    font-size: 12px;
+    font-family: $MontSemiBold;
+
+    @include respond-to(t) {
+      font-size: 16px;
+    }
+
+    @include respond-to(lg) {
+      font-size: 22px;
+    }
+  }
+}
+
+.control__panel {
+  height: 180px;
+  padding-top: 20px;
+
+  @include respond-to(lp) {
+    height: 220px;
+    padding-bottom: 80px;
+  }
+
+  @include respond-to(lg) {
+    height: 250px;
+  }
+
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .control__wrap {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    @include respond-to(lp) {
+      justify-content: space-around;
+    }
+  }
+
+  .loc-btn {
+    width: 50%;
+    height: 150px;
+    color: #EFAF77;
+    font-family: $MontSemiBold;
+    font-size: 12px;
+    line-height: 1.4;
+    position: relative;
+
+    &.is-disabled {
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    @include respond-to(t) {
+      margin-top: 40px;
+      font-size: 18px;
+      height: 80px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    @include respond-to(lp) {
+      width: 30%;
+    }
+
+    @include respond-to(lg) {
+      // width: 30%;
+      font-size: 22px;
+    }
+
+    .prev-text {
+      padding-left: 50px;
+    }
+
+    &.prev-loc {
+      padding-right: 25px;
+      text-align: right;
+
+      &:hover {
+        &:before {
+          right: 45px;
+        }
+      }
+
+      &:before {
+        display: block;
+        content: url('../img/minified-svg/leftArr.svg');
+        width: 18px;
+        height: 20px;
+        position: absolute;
+        right: 25px;
+        bottom: 5px;
+        transition: all .5s ease;
+
+        @include respond-to(t) {
+          width: 30px;
+          height: 20px;
+          left: 30px;
+          right: unset;
+          bottom: 10px;
+        }
+      }
+
+      @include respond-to(t) {
+        padding-left: 40px;
+
+
+        &:hover {
+          &:before {
+            left: -15px;
+          }
+        }
+      }
+    }
+
+    .next-text {
+      padding-right: 50px;
+    }
+
+    &.next-loc {
+      padding-left: 25px;
+      text-align: left;
+
+      &:hover {
+        &:after {
+          right: -45px;
+        }
+      }
+
+      &:after {
+        display: block;
+        content: url('../img/minified-svg/rightArr.svg');
+        width: 18px;
+        height: 20px;
+        position: absolute;
+        left: 25px;
+        bottom: 5px;
+        transition: all .5s ease;
+
+        @include respond-to(t) {
+          width: 30px;
+          height: 20px;
+          right: 30px;
+          left: unset;
+          bottom: 10px;
+        }
+      }
+
+      @include respond-to(t) {
+        padding-right: 40px;
+
+        &:hover {
+          &:after {
+            right: -15px;
+          }
+        }
+
+      }
+    }
+
+    .loc-name {
+      margin-top: 20px;
+      font-size: 15px;
+      line-height: 1.5;
+      color: #000;
+
+      @include respond-to(t) {
+        font-size: 22px;
+      }
+
+      @include respond-to(lg) {
+        font-size: 30px;
+        margin-top: 12px;
+      }
+    }
+  }
+}
+
+.page-error {
+
+  .header__wrap,
+  .footer-full .footer-top,
+  .footer-full .footer-center {
+    background: #ffe4e1;
+  }
+
+
+  .footer {
+    background: #e7dcda;
+  }
+
+  .error {
+    &-wrap {
+      position: relative;
+    }
+
+    &-head {
+      width: 100%;
+      height: 565px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+
+      @include respond-to(t) {
+        justify-content: flex-end;
+        height: 490px;
+      }
+
+      @include respond-to(lp) {
+        height: 570px;
+      }
+
+      @include respond-to(d) {
+        // height: 570px;
+        height: calc(100vh - 288px);
+      }
+
+      @include respond-to(lg) {
+        // height: 890px;
+        height: calc(100vh - 314px);
+      }
+    }
+
+    &-header {
+      font-family: $MontExtraBold;
+      font-size: 115px;
+      margin-bottom: 80px;
+
+      @include respond-to(t) {
+        font-size: 165px;
+        margin-bottom: 30px;
+      }
+
+      @include respond-to(lp) {
+        font-size: 225px;
+      }
+
+      @include respond-to(lg) {
+        font-size: 295px;
+      }
+    }
+
+    &-text {
+      font-size: 22px;
+      font-family: $MontSemiBold;
+      margin-bottom: 40px;
+
+      @include respond-to(t) {
+        font-size: 30px;
+      }
+    }
+
+    &-link {
+      font-size: 14px;
+      font-family: $MontMedium;
+      color: #fff;
+      position: relative;
+      padding-left: 20px;
+
+      @include respond-to(t) {
+        font-size: 18px;
+        margin-bottom: 50px;
+      }
+
+      @include respond-to(lg) {
+        font-size: 24px;
+        margin-bottom: 200px;
+      }
+
+      .arr-left {
+        position: absolute;
+        top: 50%;
+        left: -10px;
+        transform: translate(0, -50%);
+        width: 15px;
+        fill: #fff;
+
+        @include respond-to(t) {
+          width: 20px;
+        }
+
+        @include respond-to(lg) {
+          width: 30px;
+          left: -30px;
+        }
+      }
+    }
+  }
+}
+
+
+#colormarker.colormarker {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+}

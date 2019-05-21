@@ -1,0 +1,87 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+<head>
+  {{> head/head head.defaults}}
+
+</head>
+
+<body class="page page-prices">
+
+  {{> header/header}}
+
+
+  <main class="prices__wrap prices">
+    <section class="section section-n1 prices-head active" style="background-image: url(./static/img/content/main/imgM2.jpg)">
+      <div class="filter-black"></div>
+      <div class="prices__title-block">
+        <div class="prices__title-supheader">варианты размещения</div>
+        <div class="prices__title-header">Тарифные планы</div>
+      </div>
+      <div class="prices__info-block">
+        <div class="prices__info-text">Бронируй тестовый день ( 4 часа ) прямо сейчас!
+        </div>
+        {{> button/button
+        class='open-form btn-b prices__btn-b'
+        text='Забронировать'
+        }}
+      </div>
+    </section>
+    <section class="section section-n2 price">
+      <div class="price__section-header">Выберите город или локацию:</div>
+      <div class="dropdown-wrap">
+        <div class="take-city">
+          <div class="drop-title">Город:</div>
+
+          {{> dropdown/dropdown
+          class='city custom-select price-city'
+          value1='kiev'
+          name1='Киев'
+          value2='lviv'
+          name2='Львов'
+          value3='odessa'
+          name3='Одесса'
+          value4='kharkiv'
+          name4='Харьков'
+          }}
+        </div>
+        <div class="take-location">
+          <div class="drop-title">Локация:</div>
+          {{> dropdown/dropdown
+          class='location custom-select price-location'
+
+          value1='kiev'
+          name1='Platforma'
+          value2='lviv'
+          name2='Mega platforma'
+          value3='odessa'
+          name3='Ultra platforma'
+          value4='kharkiv'
+          name4='Best of the best'
+          }}
+        </div>
+      </div>
+      {{>price/price}}
+
+      {{> button/button-link
+      class='open-form prices__btn-b btn-b'
+      text='Подробнее про локацию'
+      }}
+    </section>
+
+
+
+  </main>
+
+  {{> footer/footer-full}}
+
+  <!-- <script src="%=static=%js/separate-js/svg4everybody.min.js"></script>
+            <script>svg4everybody();</script> -->
+
+  <!-- Main scripts. You can replace it, but I recommend you to leave it here     -->
+  <script src="%=static=%js/main%=hash=%%=min=%.js"></script>
+
+
+</body>
+
+</html>

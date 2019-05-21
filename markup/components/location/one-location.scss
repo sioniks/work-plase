@@ -1,0 +1,626 @@
+.page__one-location {
+
+  .header__wrap {
+    background: #FBF1E7;
+
+    &.full {
+      transition: background .5s ease-in;
+      background: #DD7C56;
+    }
+  }
+
+  .location {
+    &__wrap {
+      position: relative;
+
+      &.full {
+        .section {
+          transition: background .5s ease-in;
+          background: #DD7C56;
+        }
+      }
+    }
+
+    &__subscribe {
+      position: absolute;
+      z-index: 2;
+      top: 120px;
+      width: 100%;
+      text-align: center;
+    }
+
+    &-subtitle {
+      font-family: $MontSemiBold;
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+      color: #F0DCBE;
+    }
+
+    &-title {
+      font-family: $MontExtraBold;
+      font-size: 36px;
+      line-height: 1.5;
+      color: #FFF;
+    }
+  }
+
+  .section {
+    background: #FBF1E7;
+    position: relative;
+    transition: all 1s ease;
+
+
+
+  }
+
+  .container {
+    position: relative;
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+
+  }
+
+  .head {
+    @include respond-to(lp) {
+      height: 580px;
+    }
+
+    @include respond-to(lg) {
+      height: 875px;
+    }
+
+    &-supheader {
+      text-align: center;
+      font-size: 14px;
+      text-transform: uppercase;
+      font-family: $MontSemiBold;
+      color: #F0DCBE;
+      @include position(centerX);
+      z-index: 2;
+      top: 130px;
+
+      @include respond-to(t) {
+        font-size: 16px;
+      }
+
+      @include respond-to(lp) {
+        transform: translate(0%, -50%);
+        top: 40%;
+        left: 12%;
+        font-size: 18px;
+      }
+
+      @include respond-to(lg) {
+        font-size: 26px;
+        top: 50%;
+      }
+    }
+
+    &-header {
+      text-align: center;
+      font-size: 36px;
+      font-family: $MontExtraBold;
+      color: #FFF;
+      margin: 0;
+      @include position(centerX);
+      z-index: 2;
+      top: 170px;
+
+      @include respond-to(t) {
+        font-size: 50px;
+      }
+
+      @include respond-to(lp) {
+        transform: translate(0%, -50%);
+        top: 50%;
+        left: 12%;
+        font-size: 70px;
+
+      }
+
+      @include respond-to(lg) {
+        font-size: 96px;
+        top: 60%;
+      }
+    }
+
+    .slider__content {
+      @include respond-to(lp) {
+        width: 520px;
+        left: 50%;
+      }
+
+      @include respond-to(lg) {
+        height: 150px;
+      }
+    }
+  }
+
+  .map {
+    min-height: 590px;
+    padding: 65px 0;
+
+    @include respond-to(lp) {
+      min-height: 625px;
+      height: auto;
+    }
+
+    .container {
+      @include respond-to(lp) {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+      }
+    }
+
+    &__wrap {
+      height: 220px;
+      width: 260px;
+      margin: 0 auto;
+      position: relative;
+
+      @include respond-to(t) {
+        height: 360px;
+        width: 500px;
+        margin-top: 35px;
+        margin-bottom: 70px;
+      }
+
+      @include respond-to(lg) {
+        height: 520px;
+        width: 720px;
+      }
+    }
+
+    #mapid {
+      height: 100%;
+
+      .leaflet-popup-content-wrapper,
+      .leaflet-popup-tip {
+        box-shadow: none;
+        border-radius: 0;
+      }
+
+      .leaflet-tile-pane {
+        filter: grayscale(100%);
+      }
+
+      .leaflet-popup {
+        bottom: 30px !important;
+      }
+    }
+
+    &-contact {
+      width: 100%;
+      height: 100%;
+      background: #DD7C56;
+      color: #FFF;
+      padding: 45px 25px;
+      font-family: $MontSemiBold;
+      font-size: 14px;
+      line-height: 1.8;
+
+      @include respond-to(t) {
+        width: 290px;
+        height: 110px;
+        position: absolute;
+        z-index: 2;
+        bottom: 30px;
+        left: -20px;
+        padding: 17px 10px 17px 30px;
+      }
+
+      @include respond-to(lg) {
+        left: -30px;
+        bottom: 50px;
+        width: 450px;
+        height: 170px;
+        font-size: 22px;
+        padding: 17px 10px 17px 50px;
+      }
+
+      .text {
+        margin-bottom: 25px;
+        position: relative;
+
+        &-item {
+          display: flex;
+          align-items: center;
+        }
+
+        p {
+          margin: 0;
+        }
+
+        .icon-svg {
+          width: 15px;
+          height: 15px;
+          display: block;
+          margin-right: 15px;
+          fill: #fff;
+          opacity: .3;
+
+          @include respond-to(lg) {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+
+      .phone-link {
+        color: #FFF;
+        cursor: pointer;
+      }
+
+      .link {
+        width: 100%;
+        text-align: center;
+
+        a {
+          color: #FFF;
+          cursor: pointer;
+          position: relative;
+          width: auto;
+
+          &:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: #FFF;
+          }
+
+        }
+
+        @include respond-to(t) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .info {
+    &__block {
+      width: 100%;
+      height: auto;
+      text-align: center;
+      margin-bottom: 50px;
+
+      @include respond-to(lp) {
+        width: 50%;
+        padding-left: 70px;
+        text-align: left;
+      }
+
+      @include respond-to(lg) {
+        min-height: 400px;
+        position: relative;
+        padding-bottom: 100px;
+      }
+
+      .button-wrap {
+        @include respond-to(lg) {
+          display: flex;
+        }
+      }
+
+      .download-link {
+        font-family: $MontSemiBold;
+
+        @include respond-to(lp) {
+          font-size: 18px;
+        }
+
+        @include respond-to(lg) {
+          font-size: 22px;
+        }
+
+        .icon-svg {
+          width: 16px;
+          height: 16px;
+          position: relative;
+          top: 3px;
+
+          @include respond-to(lg) {
+            margin-right: 20px;
+          }
+        }
+      }
+    }
+
+    &-header {
+      font-family: $MontSemiBold;
+      font-size: 22px;
+
+      @include respond-to(t) {
+        font-size: 30px;
+      }
+
+      @include respond-to(lg) {
+        font-size: 40px;
+      }
+    }
+
+
+
+    &-text {
+      font-family: $MontMedium;
+      color: #4a4a4a;
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 25px;
+
+      @include respond-to(t) {
+        width: 430px;
+        margin: 0 auto 25px;
+      }
+
+      @include respond-to(lg) {
+        margin: 0 50px 40px;
+        font-size: 18px;
+      }
+    }
+
+    // &__wrap-input {
+    //   position: relative;
+    //   margin-bottom: 30px;
+
+    //   @include respond-to(lg) {
+    //     margin-right: 10px;
+    //   }
+
+    //   &.has-error {
+    //     .some-error {
+    //       visibility: visible;
+    //       opacity: 1;
+    //     }
+
+    //     .info__mail-input {
+    //       border: 2px solid #E82D2D;
+    //     }
+    //   }
+
+    //   .some-error {
+    //     position: relative;
+    //     display: block;
+    //     visibility: hidden;
+    //     opacity: 0;
+    //     bottom: -20px;
+    //     left: 0;
+    //     font-size: 14px;
+    //     font-family: $MontSemiBold;
+    //     color: #E82D2D;
+    //     transition: all .5s ease;
+
+    //     @include respond-to(t) {
+    //       position: absolute;
+    //       bottom: -15px;
+    //     }
+
+    //     @include respond-to(lp) {
+    //       bottom: -18px;
+    //     }
+    //   }
+    // }
+
+    // &__mail-link {
+    //   @include respond-to(lg) {
+    //     width: 290px;
+    //   }
+    // }
+
+    // &__mail-input {
+    //   font-family: $MontSemiBold;
+    //   font-size: 15px;
+    //   // line-height: 1;
+    //   padding: 0 28px;
+    //   width: 245px;
+    //   height: 65px;
+    //   line-height: 1;
+    //   text-align: center;
+    //   position: relative;
+    //   cursor: pointer;
+    //   // text-transform: uppercase;
+    //   display: inline-block;
+    //   border: 2px solid #d7d7d7;
+    //   background: transparent;
+
+    //   @include respond-to(t) {
+    //     width: 265px;
+    //   }
+
+    //   @include respond-to(lg) {
+    //     width: 290px;
+    //   }
+
+    //   &::placeholder {
+    //     color: #d7d7d7;
+    //     // text-transform: uppercase;
+    //   }
+
+    //   &:active,
+    //   &:focus {
+    //     text-transform: lowercase;
+    //     border: 2px solid #8A8A8A;
+
+    //     &::placeholder {
+    //       opacity: 0;
+    //     }
+    //   }
+    // }
+
+    // .button-wrap {}
+
+  }
+
+  .workplace {}
+
+  .price {
+    min-height: 1120px;
+    background-color: #DD7C56;
+
+    @include respond-to(t) {
+      overflow: hidden;
+      min-height: 800px;
+    }
+
+    @include respond-to(lg) {
+      height: 950px;
+    }
+
+    &-header {
+      font-size: 22px;
+      font-family: $MontSemiBold;
+      text-align: center;
+      color: #fff;
+
+      @include respond-to(t) {
+        margin-top: 100px;
+        font-size: 30px;
+      }
+
+      @include respond-to(lg) {
+        font-size: 40px;
+      }
+    }
+
+    &-subheader {
+      font-size: 14px;
+      line-height: 1.5;
+      font-family: $MontSemiBold;
+      text-align: center;
+      color: #fff;
+      margin-bottom: 80px;
+
+      @include respond-to(t) {
+        font-size: 16px;
+      }
+
+      @include respond-to(lp) {
+        display: none;
+      }
+    }
+
+    // .sub-price {
+    //   position: absolute;
+    //   bottom: -40px;
+    //   font-size: 14px;
+    //   width: 100%;
+    //   text-align: center;
+    //   opacity: .3;
+
+    //   @include respond-to(lp) {
+    //     text-align: right;
+    //     left: -2em;
+    //   }
+
+    //   @include respond-to(lg) {
+    //     font-size: 18px;
+    //   }
+    // }
+
+  }
+
+  .event__list {
+    .event-big_date {
+      @include respond-to(t) {
+        width: 145px;
+        height: 145px;
+      }
+
+      @include respond-to(lg) {
+        width: 195px;
+        height: 195px;
+      }
+    }
+  }
+
+  .gallery {
+    // @include respond-to(lp) {
+    //   height: 90vh;
+    // }
+
+    @include respond-to(lg) {
+      height: 760px;
+      // FIXME сделать галерею в два ряда
+      // height: 380px;
+    }
+  }
+
+  .control__panel {}
+
+  .fancybox-image,
+  .fancybox-spaceball {
+    height: 90%;
+    width: 90%;
+    left: 5%;
+  }
+
+  .fancybox-caption {
+    width: 90%;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    height: 100px;
+    background: #fff;
+    color: #4a4a4a;
+    // padding-left: 10%;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+
+    &:before,
+    &:after {
+      display: none;
+    }
+
+    @include respond-to(t) {
+      width: 50%;
+      bottom: 30px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      height: 120px;
+      background: #fff;
+      color: #000;
+      // padding-left: 10%;
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+
+    }
+
+    @include respond-to(lp) {
+      width: 50%;
+      bottom: 10px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      height: 80px;
+      background: #fff;
+      color: #000;
+      // padding-left: 10%;
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+
+    }
+
+    @include respond-to(lg) {
+      width: 50%;
+      bottom: 20px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      height: 100px;
+      background: #fff;
+      color: #000;
+      // padding-left: 10%;
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+
+    }
+  }
+}

@@ -1,0 +1,64 @@
+/* Your custom fonts here */
+
+@font-face {
+  font-family: 'Montserrat-ExtraBold';
+  src: url('../fonts/monserrat/Montserrat-ExtraBold.eot');
+  src: url('../fonts/monserrat/Montserrat-ExtraBold.eot?#iefix') format('embedded-opentype'),
+    //  url('../fonts/monserrat/Montserrat-ExtraBold.woff') format('woff'),
+    url('../fonts/monserrat/Montserrat-ExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat-Bold';
+  src: url('../fonts/monserrat/Montserrat-Bold.eot');
+  src: url('../fonts/monserrat/Montserrat-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/monserrat/Montserrat-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat-SemiBold';
+  src: url('../fonts/monserrat/Montserrat-SemiBold.eot');
+  src: url('../fonts/monserrat/Montserrat-SemiBold.eot?#iefix') format('embedded-opentype'),
+    //  url('../fonts/monserrat/Montserrat-SemiBold.woff') format('woff'),
+    url('../fonts/monserrat/Montserrat-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat-Medium';
+  src: url('../fonts/monserrat/Montserrat-Medium.eot');
+  src: url('../fonts/monserrat/Montserrat-Medium.eot?#iefix') format('embedded-opentype'),
+    //  url('../fonts/monserrat/Montserrat-SemiBold.woff') format('woff'),
+    url('../fonts/monserrat/Montserrat-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url('../fonts/monserrat/Montserrat-Regular.eot');
+  src: url('../fonts/monserrat/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+    //  url('../fonts/monserrat/Montserrat-SemiBold.woff') format('woff'),
+    url('../fonts/monserrat/Montserrat-Regular.ttf') format('truetype');
+}
+
+
+
+// Var for using custom font
+$MontExtraBold: 'Montserrat-ExtraBold',
+Helvetica,
+Arial,
+sans-serif;
+$MontBold: 'Montserrat-Bold',
+Helvetica,
+Arial,
+sans-serif;
+$MontSemiBold: 'Montserrat-SemiBold',
+Helvetica,
+Arial,
+sans-serif;
+$MontMedium: 'Montserrat-Medium',
+Helvetica,
+Arial,
+sans-serif;
+$MontRegular: 'Montserrat-Regular',
+Helvetica,
+Arial,
+sans-serif;

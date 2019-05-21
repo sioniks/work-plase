@@ -1,0 +1,745 @@
+.page-blog {
+
+  .header__wrap,
+  .footer-full .footer-top,
+  .footer-full .footer-center {
+    background-color: #f9f6f5;
+  }
+
+  .header__wrap.full {
+    transition: background 0.5s ease-in;
+    background-color: #896a67;
+
+    // .menu-link {
+    //   color: #fff;
+
+    //   &:after {
+    //     background: #fff;
+    //   }
+    // }
+
+    .custom-select-trigger {
+      @include respond-to(lp) {
+        color: #fff;
+      }
+
+      &:after {
+        @include respond-to(lp) {
+          border-bottom: 2px solid #fff;
+          border-right: 2px solid #fff;
+        }
+
+      }
+    }
+  }
+
+  .subscribe {
+    height: 340px;
+    padding: 40px 10%;
+  }
+}
+
+.blog {
+  &__wrap {
+    position: relative;
+    overflow: hidden;
+
+    .section {
+      transition: background 0.5s ease-in;
+      background-color: #f9f6f5;
+    }
+
+    &.full {
+      .section {
+        transition: background 0.5s ease-in;
+        background-color: #896a67;
+      }
+    }
+  }
+
+  &-head {
+    height: 565px;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+
+    @include respond-to(t) {
+      height: 490px;
+    }
+
+    @include respond-to(lp) {
+      height: 580px;
+    }
+
+    @include respond-to(lg) {
+      height: 875px;
+    }
+  }
+
+  &__head-wrap {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+
+    .text-wrap {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding-top: 150px;
+
+      @include respond-to(t) {
+        padding-top: 50px;
+        justify-content: center;
+      }
+
+      @include respond-to(lp) {
+        text-align: left;
+        align-items: flex-start;
+        padding-left: 12%;
+      }
+    }
+  }
+
+  &__head-header {
+    font-size: 36px;
+    line-height: 2;
+    font-family: $MontExtraBold;
+    color: #fff;
+
+    @include respond-to(t) {
+      font-size: 50px;
+    }
+
+    @include respond-to(lp) {
+      font-size: 70px;
+    }
+
+    @include respond-to(lg) {
+      font-size: 96px;
+    }
+  }
+
+  &__head-subheader {
+    font-size: 14px;
+    line-height: 2;
+    font-family: $MontSemiBold;
+    color: #fff;
+    text-transform: uppercase;
+
+    @include respond-to(t) {
+      font-size: 18px;
+    }
+
+    @include respond-to(lg) {
+      font-size: 24px;
+    }
+  }
+
+  .filter-black {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(#000, 0.5);
+  }
+
+  .topnews {
+    padding-bottom: 50px;
+
+    .container {
+      position: relative;
+      width: 90%;
+      margin: 0 auto;
+
+      @include respond-to(t) {
+        width: 80%;
+      }
+    }
+
+    .dropdown-wrap {
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      @include respond-to(t) {
+        height: 150px;
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      @include respond-to(lp) {
+        justify-content: flex-start;
+        margin-bottom: 55px;
+      }
+    }
+
+    .drop-title {
+      text-transform: uppercase;
+      opacity: 0.3;
+      font-size: 12px;
+      line-height: 1.5;
+      font-family: $MontBold;
+      min-width: 80px;
+
+      @include respond-to(lg) {
+        font-size: 16px;
+      }
+    }
+
+    .take-posts {
+      display: flex;
+      align-items: center;
+      position: relative;
+      z-index: 21;
+
+      @include respond-to(t) {
+        padding-right: 50px;
+
+        &:after {
+          content: "";
+          height: 30px;
+          width: 2px;
+          background: rgba(#000, 0.1);
+          position: absolute;
+          right: 0;
+          bottom: 60px;
+        }
+      }
+
+      .posts {
+        margin: 15px 0;
+        width: 200px;
+      }
+    }
+
+    .take-time {
+      display: flex;
+      align-items: center;
+      position: relative;
+      z-index: 20;
+
+      @include respond-to(t) {
+        width: 50%;
+        padding: 0 0 0 50px;
+      }
+
+      .time {
+        margin: 15px 0;
+        width: 200px;
+      }
+    }
+
+    .custom-select-trigger {
+      width: 200px;
+
+      &:after {
+        position: absolute;
+        display: block;
+        content: "";
+        width: 7px;
+        height: 7px;
+        top: 50%;
+        right: 25px;
+        margin-top: -3px;
+        border-bottom: 2px solid #000;
+        border-right: 2px solid #000;
+        transform: rotate(45deg) translateY(-50%);
+        transition: all 0.4s ease-in-out;
+        transform-origin: 50% 0;
+      }
+    }
+
+    &__one {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 50px;
+
+      @include respond-to(t) {
+        flex-direction: row;
+        align-items: flex-start;
+      }
+
+      @include respond-to(lp) {
+        align-items: center;
+        margin-bottom: 120px;
+      }
+
+      .topnews-text_header {
+        font-size: 22px;
+
+        @include respond-to(lp) {
+          font-size: 30px;
+        }
+
+        @include respond-to(lg) {
+          font-size: 40px;
+        }
+      }
+
+      .topnews-text_subheader {
+        @include respond-to(lp) {
+          font-size: 16px;
+        }
+
+        @include respond-to(lg) {
+          font-size: 18px;
+        }
+      }
+
+      .topnews-text_description {
+        @include respond-to(lp) {
+          font-size: 16px;
+        }
+
+        @include respond-to(lg) {
+          font-size: 20px;
+        }
+      }
+
+      .topnews-img_wrap {
+        overflow: visible;
+
+        @include respond-to(t) {
+          width: 50%;
+          height: 25vw;
+        }
+      }
+
+      .topnews-text_wrap {
+        @include respond-to(t) {
+          width: 50%;
+          padding-left: 50px;
+        }
+
+        @include respond-to(lg) {
+          padding-left: 150px;
+        }
+      }
+    }
+
+    &-img_wrap {
+      width: 95%;
+      position: relative;
+      height: 52vw;
+      margin-bottom: 40px;
+      overflow: hidden;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #c6ada3;
+        left: -10px;
+        top: 10px;
+      }
+
+      @include respond-to(t) {
+        width: 100%;
+        height: 23vw;
+      }
+
+      @include respond-to(lp) {
+        height: 15vw;
+      }
+    }
+
+    &-img {
+      position: relative;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      transition: all .5s ease;
+    }
+
+    &-text_wrap {
+      font-family: $MontSemiBold;
+    }
+
+    &-text_header {
+      font-size: 16px;
+      line-height: 1.4;
+      margin-bottom: 25px;
+      color: #000;
+      transition: all .5s ease;
+
+      @include respond-to(lp) {
+        font-size: 18px;
+      }
+
+      @include respond-to(lg) {
+        font-size: 22px;
+      }
+    }
+
+    &-text_subheader {
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+      color: #a4a4a4;
+      font-family: $MontMedium;
+
+      @include respond-to(lp) {
+        font-size: 16px;
+      }
+    }
+
+    &-text_description {
+      display: flex;
+      font-size: 12px;
+      opacity: 0.3;
+      cursor: default;
+
+      @include respond-to(lp) {
+        font-size: 16px;
+      }
+
+      .descr_date {
+        min-width: 80px;
+        max-width: 50%;
+        padding-right: 25px;
+        margin-right: 25px;
+        position: relative;
+
+        &:after {
+          content: "";
+          position: absolute;
+          transform: translateY(-50%);
+          width: 1px;
+          height: 14px;
+          top: 50%;
+          right: 0;
+          background-color: #000;
+        }
+      }
+
+      .descr_label {}
+    }
+
+    &__list {
+      @include respond-to(t) {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+      }
+
+      &-item {
+        margin-bottom: 60px;
+      }
+
+      .topnews-img_wrap {
+        &:after {
+          content: none;
+        }
+      }
+    }
+
+    &__list-item {
+      display: block;
+      width: 100%;
+
+      @include respond-to(t) {
+        width: 45%;
+      }
+
+      @include respond-to(lp) {
+        width: 30%;
+      }
+
+      &:hover {
+        @include respond-to(lp) {
+          .topnews-img {
+            transform: scale(1.1);
+          }
+
+          .topnews-text_header {
+            opacity: .7;
+          }
+        }
+      }
+    }
+
+    // &__item-link {
+    //   display: block;
+    //   width: 100%;
+
+    //   @include respond-to(t) {
+    //     width: 45%;
+    //   }
+
+    //   @include respond-to(lp) {
+    //     width: 30%;
+    //   }
+    // }
+
+  }
+
+  .topevents {
+    height: 100%;
+    background-color: #896a67;
+
+    .event__list-header,
+    .event-title {
+      color: #fff;
+    }
+
+    .event-subtitle,
+    .event-date,
+    .event-price {
+      color: rgba(#fff, .3);
+    }
+
+    .event__block-white {
+
+      .event__list-header,
+      .event-title {
+        color: #000;
+      }
+
+      .event-subtitle,
+      .event-date,
+      .event-price {
+        color: rgba(#000, .3);
+      }
+    }
+
+  }
+
+
+}
+
+.subscribe {
+  height: 500px;
+  padding: 40px 10%;
+
+  @include respond-to(t) {
+    height: 230px;
+    padding: 90px 0 50px;
+  }
+
+  &-header {
+    font-family: $MontSemiBold;
+    font-size: 18px;
+    text-align: center;
+    padding-bottom: 25px;
+    line-height: 1.5;
+
+    @include respond-to(t) {
+      width: 100%;
+      position: relative;
+      // top: 40px;
+    }
+
+    @include respond-to(lp) {
+      width: 30%;
+      // position: relative;
+      top: unset;
+      padding-bottom: 0;
+      text-align: left;
+    }
+
+    @include respond-to(lg) {
+      width: 20%;
+    }
+  }
+
+  .form-block {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+
+    @include respond-to(t) {
+      flex-direction: row;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    @include respond-to(lp) {
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__wrap-input {
+    position: relative;
+    margin-bottom: 20px;
+
+    @include respond-to(t) {
+      margin-bottom: 0;
+    }
+
+    @include respond-to(lp) {
+      margin-right: 25px;
+    }
+
+    &.has-error {
+      .some-error {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      .subscribe__mail-input {
+        border: 2px solid #e82d2d;
+      }
+    }
+
+    .some-error {
+      position: relative;
+      display: block;
+      visibility: hidden;
+      opacity: 0;
+      bottom: -10px;
+      left: 0;
+      font-size: 14px;
+      font-family: $MontSemiBold;
+      color: #E82D2D;
+      transition: all .5s ease;
+
+      @include respond-to(lp) {
+        position: absolute;
+        bottom: -20px;
+      }
+    }
+  }
+
+  &__mail-input {
+    font-family: $MontSemiBold;
+    font-size: 15px;
+    line-height: 1.2;
+    padding: 0 28px;
+    min-width: 260px;
+    height: 65px;
+    // line-height: 63px;
+    // text-align: center;
+    position: relative;
+    cursor: pointer;
+    // text-transform: uppercase;
+    display: inline-block;
+    border: 2px solid #d7d7d7;
+    background: transparent;
+    appearance: none;
+    border-radius: 0;
+
+    @include respond-to(t) {
+      width: 340px;
+      text-align: left;
+    }
+
+    @include respond-to(lg) {
+      width: 480px;
+    }
+
+    &::placeholder {
+      color: #d7d7d7;
+      // text-transform: uppercase;
+    }
+
+    &:active,
+    &:focus {
+      text-transform: lowercase;
+      border: 2px solid #8A8A8A;
+
+      &::placeholder {
+        opacity: 0;
+      }
+    }
+  }
+
+  &__mail-link.button__box {
+    @include respond-to(t) {
+      width: 230px;
+    }
+
+    @include respond-to(lp) {
+      width: 260px;
+    }
+  }
+}
+
+.pagination {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .page-list,
+  .pagination-box {
+    list-style-type: none; // width: 50%;
+    display: flex;
+    height: 38px;
+    padding-inline-start: 0;
+
+    @include respond-to(t) {
+      height: 60px;
+    }
+  }
+
+  .page-item,
+  li:not(:last-child),
+  li:not(:first-child) {
+    width: 38px;
+    height: 38px;
+    line-height: 35px;
+    font-size: 13px;
+    font-family: $MontSemiBold;
+    text-align: center;
+    transition: all .5s ease;
+    border: 1px solid transparent;
+    margin: 3px;
+
+    @include respond-to(t) {
+      width: 48px;
+      height: 48px;
+      line-height: 48px;
+      font-size: 16px;
+      margin: 5px;
+    }
+
+    &:hover {
+      opacity: .7;
+    }
+
+    &.is-active,
+    &.active {
+      border: 1px solid #000;
+    }
+  }
+
+  .icon-svg {
+    display: block;
+    width: 20px;
+    height: 36px;
+    margin: 0 auto;
+
+    @include respond-to(t) {
+      height: 46px;
+    }
+  }
+
+  .icons {
+    position: relative;
+    top: -10px;
+
+    &.prev {
+      margin-right: 15px;
+    }
+
+    &.next {
+      margin-left: 15px;
+    }
+  }
+}

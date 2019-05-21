@@ -1,0 +1,76 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+<head>
+  {{> head/head head.defaults}}
+
+</head>
+
+<body class="page page-locations">
+
+  {{> header/header}}
+
+  <main class="locations__wrap">
+
+    <section class="section locations-section active">
+      <div class="block col-e">
+        <div class="section-h3">Локации</div>
+        <div class="section-text">Создаем условия для того, чтобы вы ценили свою жизнь: работая, отдыхая, общаясь. В
+          режиме
+          24/7. Иногда и выходим за пределы графика.</div>
+
+        {{> button/button
+        class='open-form btn-b'
+        text='Забронировать визит'
+        }}
+      </div>
+      <div class="take-city city-dropdown">
+        <div class="dropdown-name">Город:</div>
+        {{> dropdown/dropdown
+        class='city custom-select'
+        value1='kiev'
+        name1='Киев'
+        value2='lviv'
+        name2='Львов'
+        value3='odessa'
+        name3='Одесса'
+        value4='kharkiv'
+        name4='Харьков'
+        }}
+      </div>
+    </section>
+    <section class="section locations-section">
+      {{> location/mini-location
+      text='Арт-завод Платформа'
+      link='/one-location.html'
+      mob-img='imgM1.jpg'
+      def-img='img1.jpg'
+      }}
+
+    </section>
+    <section class="section locations-section">
+
+      {{> location/mini-location
+      text='БЦ Леонардо'
+      link='#'
+      mob-img='imgM2.jpg'
+      def-img='img2.jpg'
+      }}
+    </section>
+
+
+
+  </main>
+
+  {{> footer/footer}}
+
+  <!-- <script src="%=static=%js/separate-js/svg4everybody.min.js"></script>
+            <script>svg4everybody();</script> -->
+
+  <!-- Main scripts. You can replace it, but I recommend you to leave it here     -->
+  <script src="%=static=%js/main%=hash=%%=min=%.js"></script>
+
+
+</body>
+
+</html>

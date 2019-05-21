@@ -1,0 +1,90 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+<head>
+  {{> head/head head.defaults}}
+
+</head>
+
+<body class="page page-contact">
+
+  {{> header/header}}
+
+
+
+  <main class="contact contact-wrap">
+    <section class="contact-head" style="background-image: url(./static/img/content/main/er404.jpg)">
+      <div class="head-title">Контакты</div>
+      <div class="info-block">
+        <div class="block-title">Сотрудничество <br>
+          с Platforma</div>
+        <div class="block-text">
+          Присылайте свои предложения
+          на info@coworkingplatforma.com
+          c темой письма "Запрос на сотрудничество"
+        </div>
+      </div>
+    </section>
+    <section class="contact-form">
+      <div class="contact-info">
+        <div class="info">
+          <a class='info-item info-mail' href="mailto:" we@coworkingplatforma.com">we@coworkingplatforma.com</a>
+          <div class="info-item info-adress">ул. Беломорская, 1а</div>
+          <a class='info-item info-phone' href="tel:" 0443908870">+38 044 390 88 70</a>
+        </div>
+      </div>
+      <div class="popup__feedback-block big_form">
+        <div class="big_form-header">Обратная связь</div>
+        <form action="/test.php" class="full-form" id="full-form">
+
+          <div class="empty-inputs">
+            <div class="input-group">
+              <label for="#name" class="input-title">Ваше имя:</label>
+              <input type="text" name='name' id="name" value='' class="input-field" placeholder="Введите ваше имя">
+            </div>
+            <div class="input-group">
+              <label for="#phone" class="input-title">Телефон:</label>
+              <input type="tel" name='phone' id="phone" value='' class="input-field" required placeholder="Телефон">
+            </div>
+            <div class="input-group">
+              <label for="#mail" class="input-title">Email:</label>
+              <input type="email" name="mail" id="mail" value='' class="input-field" required placeholder="Email">
+            </div>
+
+            <div class="input-group ">
+              <label for="#theme" class="input-title">Тема:</label>
+              <input type="text" id="theme" value='' class="input-field" hidden>
+              <select class="js-drop location custom-select" name='theme'>
+
+                <option class="item" value="platforma">Платформа</option>
+                <option class="item" value="leonardo">Леонардо</option>
+                <option class="item" value="megacity">Мегамаркет</option>
+                <option class="item" value="atb">АТБ</option>
+
+              </select>
+            </div>
+
+            <div class="input-group">
+              <label for="#comment" class="input-title">Комментарий:</label>
+              <textarea id="comment" name="comment" value='' class="input-field comment" required placeholder="Введите текст"></textarea>
+            </div>
+          </div>
+          <button type="submit" class='button__box btn-b'>Отправить</button>
+        </form>
+
+      </div>
+    </section>
+  </main>
+
+  {{> footer/footer-full}}
+
+  <!-- <script src="%=static=%js/separate-js/svg4everybody.min.js"></script>
+            <script>svg4everybody();</script> -->
+
+  <!-- Main scripts. You can replace it, but I recommend you to leave it here     -->
+  <script src="%=static=%js/main%=hash=%%=min=%.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<div class="popup popup__city-wrap is-closed">
+  <div class="popup-sublayer"></div>
+  <div class="popup__city-block">
+    <div class="popup__city-header">
+      Ваш город – Киев?
+    </div>
+    <div class="city-buttons">
+      {{>button/button
+      class='btn-b popap__city-yes'
+      text='Да'
+      }}
+
+      <select class="js-drop city custom-select-choise reload" name='city'>
+
+        <option class="item" value="Kiev">Киев</option>
+        <option class="item" value="Odessa">Одесса</option>
+        <option class="item" value="Lviv">Львов</option>
+        <option class="item" value="Dnipro">Днепр</option>
+
+      </select>
+    </div>
+    <div class="close-popup">
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</div>

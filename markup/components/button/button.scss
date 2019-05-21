@@ -1,0 +1,91 @@
+.button__box {
+  font-family: $MontSemiBold;
+  font-size: 15px;
+  line-height: 65px;
+  padding: 0 8px;
+  width: 245px;
+  height: 65px;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: all 277ms cubic-bezier(0.16, 0.01, 0.77, 1);
+  display: inline-block;
+
+  @include respond-to(t) {
+    width: 265px;
+    padding: 0 28px;
+  }
+
+
+  &.btn-b {
+    border: none;
+    background-color: #000;
+    color: #fff;
+  }
+
+  &.btn-w {
+    border: 2px solid #000;
+    background-color: transparent;
+    color: #000;
+    line-height: 60px;
+  }
+
+  &:hover {
+    transition: all 277ms cubic-bezier(0.16, 0.01, 0.77, 1);
+
+    &:before {
+      transform: scaleX(1);
+      transform-origin: left 50%;
+    }
+  }
+
+  &.is-disabled {
+    user-select: none;
+    pointer-events: none;
+    color: #9B9B9B;
+    background: #ccc;
+  }
+
+  &:before {
+    content: '';
+    z-index: 1;
+    transform: scaleX(0);
+    transform-origin: right 50%;
+    transition-property: transform;
+    transition-duration: 380ms;
+    background-color: #bfb7b5;
+    padding-bottom: 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    opacity: .5;
+  }
+
+  .over {
+    position: relative;
+    z-index: 10;
+  }
+
+  &.subscribe__mail-link {
+    @include respond-to(lg) {
+      width: 290px;
+    }
+
+    .over {
+      @include position(center);
+      opacity: 0;
+      z-index: 10;
+      transition: all .5s ease-in;
+
+      &.done {
+        opacity: 1;
+      }
+    }
+  }
+
+}

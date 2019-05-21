@@ -1,0 +1,42 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+<head>
+  {{> head/head head.defaults}}
+
+</head>
+
+<body class="page page-error">
+
+  {{> header/header}}
+
+
+
+  <main class="error-wrap">
+    <section class="error-head" style="background-image: url(./static/img/content/main/er404.jpg)">
+      <div class="error-header">404</div>
+      <div class="error-text">Страница не найдена</div>
+      <a href="/" class="error-link">
+        <svg class='arr-left' viewBox="0 0 19.5 26.13">
+          <g style="isolation: isolate">
+            <text transform="translate(19.5 3.25) rotate(180)" style="isolation: isolate;font-size: 26px;font-family: Material-Design-Iconic-Font, Material-Design-Iconic-Font"></text>
+          </g>
+        </svg>
+
+        Вернуться на главную
+      </a>
+    </section>
+  </main>
+
+  {{> footer/footer-full}}
+
+  <!-- <script src="%=static=%js/separate-js/svg4everybody.min.js"></script>
+            <script>svg4everybody();</script> -->
+
+  <!-- Main scripts. You can replace it, but I recommend you to leave it here     -->
+  <script src="%=static=%js/main%=hash=%%=min=%.js"></script>
+
+
+</body>
+
+</html>

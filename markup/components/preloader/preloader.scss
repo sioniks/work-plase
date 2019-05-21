@@ -1,0 +1,109 @@
+.preloader {
+  position: fixed;
+  z-index: 10000;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #fff;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 4s ease;
+  opacity: 0;
+
+  &.active {
+    display: flex;
+    opacity: 1;
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .logo {
+    width: 150px;
+    height: 180px;
+    margin-bottom: 50px;
+
+    @include respond-to(t) {
+      width: 260px;
+      height: 280px;
+    }
+
+    svg {
+      animation: fill 4s infinite alternate;
+    }
+  }
+
+  .word {
+    width: 80%;
+
+    @include respond-to(t) {
+      width: 400px;
+    }
+  }
+}
+
+// animation: fill 4s infinite alternate;
+
+@keyframes fill {
+  10% {
+    display: flex;
+    fill: #60367F;
+  }
+
+  20% {
+    fill: #93C88C;
+  }
+
+  30% {
+    fill: #DD7C56;
+  }
+
+  40% {
+    fill: #6C3444;
+  }
+
+  50% {
+    fill: #066A90;
+  }
+
+  60% {
+    fill: #3969C3;
+  }
+
+  70% {
+    fill: #44AD96;
+  }
+
+  80% {
+    fill: #EECFAF;
+  }
+
+  90% {
+    fill: #81B6E6;
+  }
+
+  100% {
+    fill: #EEB684;
+  }
+}
+
+
+@keyframes preloads {
+  0% {
+    // display: flex;
+    opacity: 1;
+  }
+
+  95% {
+    opacity: 0;
+  }
+
+  100% {
+    display: none;
+  }
+}

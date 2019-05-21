@@ -1,0 +1,64 @@
+<div class="popup popup__reserved-wrap">
+  <div class="popup-sublayer"></div>
+  <div class="popup__reserved-block big_form">
+    <div class="big_form-header">Забронировать визит:</div>
+    <form action="/test.php" class="full-form" id="full-form">
+
+      <div class="empty-inputs">
+        <div class="input-group ">
+          <label for="#reserve-city" class="input-title">Город:</label>
+          <input type="text" id="reserve-city" value='' class="input-field" hidden>
+          <select class="js-drop city custom-select" name='city'>
+
+            <option class="item" value="Kiev">Киев</option>
+            <option class="item" value="Odessa">Одесса</option>
+            <option class="item" value="Lviv">Львов</option>
+            <option class="item" value="Dnipro">Днепр</option>
+
+          </select>
+        </div>
+        <div class="input-group ">
+          <label for="#reserve-location" class="input-title">Локация:</label>
+          <input type="text" id="reserve-location" value='' class="input-field" hidden>
+          <select class="js-drop location custom-select" name='location'>
+
+            <option class="item" value="platforma">Платформа</option>
+            <option class="item" value="leonardo">Леонардо</option>
+            <option class="item" value="megacity">Мегамаркет</option>
+            <option class="item" value="atb">АТБ</option>
+
+          </select>
+        </div>
+        <div class="input-group radio-group">
+          <div class="radio-group-btn">
+            <input type="radio" name='person-count' id="personal" value='personal' class="radio-field" checked>
+            <label for="personal" class="radio-title">Один человек</label>
+          </div>
+          <div class="radio-group-btn">
+            <input type="radio" name='person-count' id="team" value='team' class="radio-field">
+            <label for="team" class="radio-title">Команда</label>
+          </div>
+        </div>
+        <div class="input-group">
+          <label for="#name" class="input-title">Ваше имя:</label>
+          <input type="text" name='name' id="name" value='' class="input-field" placeholder="Введите ваше имя">
+        </div>
+        <div class="input-group">
+          <label for="#mail" class="input-title">Email:</label>
+          <input type="email" name="mail" id="mail" value='' class="input-field" required placeholder="Email">
+        </div>
+        <div class="input-group">
+          <label for="#phone" class="input-title">Телефон:</label>
+          <input type="tel" name='phone' id="phone" value='' class="input-field" required placeholder="Телефон">
+        </div>
+
+      </div>
+      <button type="submit" class='button__box btn-b'>Отправить</button>
+    </form>
+
+    <div class="close-popup">
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</div>

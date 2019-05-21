@@ -1,0 +1,30 @@
+.map-block {
+  display: none;
+
+  @include respond-to(t) {
+    display: block;
+    position: absolute;
+    width: 500px;
+    height: 360px;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: orange;
+
+  }
+
+  @include respond-to(lp) {
+    width: 520px;
+    height: 380px;
+  }
+
+  @include respond-to(lg) {
+    width: 720px;
+    height: 520px;
+  }
+
+  #maps {
+    width: 100%;
+    height: 100%;
+  }
+}

@@ -1,0 +1,254 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+<head>
+  {{> head/head head.defaults}}
+
+</head>
+
+<body class="page page-events">
+
+  {{> header/header}}
+
+
+  <main class="events events__wrap anim__wrap">
+    <section class="section section-n1 events-head active" style="background-image: url(./static/img/content/main/imgM2.jpg)">
+      <div class="filter-black"></div>
+      <div class="events__head-wrap">
+        <div class="text-wrap">
+          <div class="events__head-subheader">Образование и события</div>
+          <div class="events__head-header">События</div>
+
+        </div>
+
+        <div class="event__block-white">
+          <div class="event-big_date">
+            <span class="event-day">24</span>
+            <span class="event-month">ноя</span>
+          </div>
+          <div class="event-subtitle">Здоровье</div>
+          <div class="event-title">Разбуди свой инстинкт крипто-трейдера</div>
+          <div class="event-date">24 ноя 19:00 - 21:00</div>
+          <div class="event-price">200 грн</div>
+        </div>
+      </div>
+      </div>
+
+    </section>
+    <section class="section section-n2 events-all">
+      <div class="container">
+        <div class="dropdown-wrap">
+          <div class="drop-filter filter-events">
+            <div class="drop-title">Рубрика:</div>
+
+            {{> dropdown/dropdown
+            class='drop-items custom-select'
+            value1='news'
+            name1='Новости'
+            value2='sale'
+            name2='Скидки'
+            value3='meganews'
+            name3='Мегановости'
+            value4='shara'
+            name4='Халява'
+            }}
+          </div>
+          <div class="drop-filter filter-date">
+            <div class="drop-title">Дата:</div>
+            {{> dropdown/dropdown
+            class='drop-items custom-select '
+
+            value1='time1'
+            name1='Новые'
+            value2='time2'
+            name2='Самыеновые'
+            value3='time3'
+            name3='Самыененовые'
+            value4='time4'
+            name4='Новости из будущего'
+            }}
+          </div>
+
+          <div class="drop-filter filter-city">
+            <div class="drop-title">Город:</div>
+
+            {{> dropdown/dropdown
+            class='drop-items custom-select'
+            value1='kiev'
+            name1='Киев'
+            value2='lviv'
+            name2='Львов'
+            value3='odessa'
+            name3='Одесса'
+            value4='kharkiv'
+            name4='Харьков'
+            }}
+          </div>
+          <div class="drop-filter filter-location">
+            <div class="drop-title">Локация:</div>
+            {{> dropdown/dropdown
+            class='drop-items custom-select'
+
+            value1='kiev'
+            name1='Platforma'
+            value2='lviv'
+            name2='Mega platforma'
+            value3='odessa'
+            name3='Ultra platforma'
+            value4='kharkiv'
+            name4='Best of the best'
+            }}
+          </div>
+        </div>
+
+        <div class="events__list">
+          <div class="event__item">
+            <div class="event-img" style="background-image: url(./static/img/content/location/mini1.jpg)"></div>
+            <div class="event__item-content">
+              <div class="event-subtitle">Здоровье</div>
+              <div class="event-title">Разбуди свой инстинкт крипто-трейдера</div>
+              <div class="event-date">24 ноя 19:00 - 21:00</div>
+              <div class="event-price">200 грн</div>
+            </div>
+          </div>
+          <div class="event__item">
+            <div class="event-img" style="background-image: url(./static/img/content/location/mini1.jpg)"></div>
+            <div class="event__item-content">
+              <div class="event-subtitle">Здоровье</div>
+              <div class="event-title">Разбуди свой инстинкт крипто-трейдера</div>
+              <div class="event-date">24 ноя 19:00 - 21:00</div>
+              <div class="event-price">200 грн</div>
+            </div>
+          </div>
+          <div class="event__item">
+            <div class="event-img" style="background-image: url(./static/img/content/location/mini1.jpg)"></div>
+            <div class="event__item-content">
+              <div class="event-subtitle">Здоровье</div>
+              <div class="event-title">Разбуди свой инстинкт крипто-трейдера</div>
+              <div class="event-date">24 ноя 19:00 - 21:00</div>
+              <div class="event-price">200 грн</div>
+            </div>
+          </div>
+          <div class="event__item">
+            <div class="event-img" style="background-image: url(./static/img/content/location/mini1.jpg)"></div>
+            <div class="event__item-content">
+              <div class="event-subtitle">Здоровье</div>
+              <div class="event-title">Разбуди свой инстинкт крипто-трейдера</div>
+              <div class="event-date">24 ноя 19:00 - 21:00</div>
+              <div class="event-price">200 грн</div>
+            </div>
+          </div>
+        </div>
+        <div class="pagination">
+          <svg class='icons prev' data-name="prev" xmlns="http://www.w3.org/2000/svg" width='20' heigth='20' viewBox="0 0 11.68 34.17">
+            <g style="isolation: isolate">
+              <text transform="translate(0 29.92)" style="isolation: isolate;font-size: 18px;font-family: Material-Design-Iconic-Font, Material-Design-Iconic-Font;letter-spacing: 0.03499827665441176em"></text>
+            </g>
+          </svg>
+
+          <ul class="page-list">
+            <li class="page-item is-active">1</li>
+            <li class="page-item">2</li>
+            <li class="page-item">3</li>
+            <li class="page-item">4</li>
+            <li class="page-item">...</li>
+            <li class="page-item">123</li>
+          </ul>
+
+          <svg class='icons next' data-name="next" xmlns="http://www.w3.org/2000/svg" width='20' heigth='20' viewBox="0 0 11.68 34.17">
+            <g style="isolation: isolate">
+              <text transform="translate(0 29.92)" style="isolation: isolate;font-size: 18px;font-family: Material-Design-Iconic-Font, Material-Design-Iconic-Font;letter-spacing: 0.03499827665441176em"></text>
+            </g>
+          </svg>
+
+        </div>
+
+      </div>
+    </section>
+    <section class="section section-n3 subscribe">
+      <div class="form-block">
+        <div class="subscribe-header">Узнавать про события и новости первым</div>
+        <div class="subscribe__wrap-input">
+          <input type="email" class="subscribe__mail-input" placeholder="E-mail">
+          <span class="error-text">Some error</span>
+        </div>
+        <button href="/" class="button__box btn-w subscribe__mail-link">
+          <span class="over">Подписаться</span>
+        </button>
+      </div>
+    </section>
+    <section class="section section-n4 another__posts" id="colormarker">
+
+      <div class="container">
+
+        <div class="another__posts-header">Другие новости</div>
+        <div class="another__posts-list">
+          <div class="another__posts-item">
+            <div class="posts-img_wrap">
+              <div class="posts-img" style="background-image: url(./static/img/content/main/imgM2.jpg)"></div>
+            </div>
+            <div class="posts-text_wrap">
+              <div class="posts-text_header">Разбуди свой инстинкт крипто-трейдера. Практические кейсы</div>
+              <div class="posts-text_description">
+                <div class="descr_date">24.34.2345</div>
+                <div class="descr_label">Новости из будущего</div>
+              </div>
+            </div>
+          </div>
+          <div class="another__posts-item">
+            <div class="posts-img_wrap">
+              <div class="posts-img" style="background-image: url(./static/img/content/main/imgM2.jpg)"></div>
+            </div>
+            <div class="posts-text_wrap">
+              <div class="posts-text_header">Разбуди свой инстинкт крипто-трейдера. Практические кейсы</div>
+              <div class="posts-text_description">
+                <div class="descr_date">24.34.2345</div>
+                <div class="descr_label">Новости из будущего</div>
+              </div>
+            </div>
+          </div>
+          <div class="another__posts-item">
+            <div class="posts-img_wrap">
+              <div class="posts-img" style="background-image: url(./static/img/content/main/imgM2.jpg)"></div>
+            </div>
+            <div class="posts-text_wrap">
+              <div class="posts-text_header">Разбуди свой инстинкт крипто-трейдера. Практические кейсы</div>
+              <div class="posts-text_description">
+                <div class="descr_date">24.34.2345</div>
+                <div class="descr_label">Новости из будущего</div>
+              </div>
+            </div>
+          </div>
+          <div class="another__posts-item">
+            <div class="posts-img_wrap">
+              <div class="posts-img" style="background-image: url(./static/img/content/main/imgM2.jpg)"></div>
+            </div>
+            <div class="posts-text_wrap">
+              <div class="posts-text_header">Разбуди свой инстинкт крипто-трейдера. Практические кейсы</div>
+              <div class="posts-text_description">
+                <div class="descr_date">24.34.2345</div>
+                <div class="descr_label">Новости из будущего</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {{> button/button-link
+        class='btn-b'
+        text='Смотреть все новости'
+        }}
+      </div>
+    </section>
+
+  </main>
+
+  {{> footer/footer-full}}
+
+  <!-- <script src="%=static=%js/separate-js/svg4everybody.min.js"></script>
+            <script>svg4everybody();</script> -->
+
+  <!-- Main scripts. You can replace it, but I recommend you to leave it here     -->
+  <script src="%=static=%js/main%=hash=%%=min=%.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<div class="popup popup__request-wrap">
+  <div class="popup-sublayer"></div>
+  <div class="popup__request-block big_form">
+    <div class="big_form-header">Оформить заявку</div>
+    <form action="/test.php" class="full-form" id="full-form">
+      <div class="full-inputs">
+        <div class="input-group">
+          <label for="#city" class="input-title">Город:</label>
+          <input type="text" name='city' id="city" value='Киев' class="input-field">
+        </div>
+        <div class="input-group">
+          <label for="#location" class="input-title">Локация:</label>
+          <input type="text" name='location' id="location" value='БЦ Леонардо' class="input-field">
+        </div>
+        <div class="input-group">
+          <label for="#worktype" class="input-title">Тип размещения:</label>
+          <input type="text" name='worktype' id="worktype" value='Рабочее место' class="input-field">
+        </div>
+        <div class="input-group">
+          <label for="#price" class="input-title">Тарифный план:</label>
+          <input type="text" name='price' id="price" value='Open space' class="input-field">
+        </div>
+      </div>
+      <div class="empty-inputs">
+        <div class="input-group">
+          <label for="#name" class="input-title">Ваше имя:</label>
+          <input type="text" name='name' id="name" value='' class="input-field" placeholder="Введите ваше имя">
+        </div>
+        <div class="input-group">
+          <label for="#phone" class="input-title">Телефон:</label>
+          <input type="tel" name='phone' id="phone" value='' class="input-field" required placeholder="Телефон">
+        </div>
+        <div class="input-group">
+          <label for="#mail" class="input-title">Email:</label>
+          <input type="email" name="mail" id="mail" value='' class="input-field" required placeholder="Email">
+        </div>
+        <div class="input-group">
+          <label for="#date" class="input-title">Дата:</label>
+          <input type="text" name='date' id="date" value='' class="input-field" hidden>
+          <select class="js-drop month custom-select" name="state">
+
+            <option class="item" value="1">Январь</option>
+            <option class="item" value="2">Февраль</option>
+            <option class="item" value="3">Март</option>
+            <option class="item" value="4">Апрель</option>
+            <option class="item" value="5">Май</option>
+            <option class="item" value="6">Июнь</option>
+            <option class="item" value="7">Июль</option>
+            <option class="item" value="8">Август</option>
+            <option class="item" value="9">Сентябрь</option>
+            <option class="item" value="10">Октябрь</option>
+            <option class="item" value="11">Ноябрь</option>
+            <option class="item" value="12">Декабрь</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <label for="#people-count" class="input-title">Колличество мест:</label>
+          <div class="people-count">
+            <input type="number" name="people-count" id="people-count" step='1' value='1' min='1' max='100' class="input-field">
+            <div class="plus-btn count-btn">+</div>
+            <div class="minus-btn count-btn">-</div>
+
+          </div>
+        </div>
+        <div class="input-group">
+          <label for="#comment" class="input-title">Комментарий:</label>
+          <textarea id="comment" name="comment" value='' class="input-field comment" required placeholder="Комментарий"></textarea>
+        </div>
+      </div>
+      <button type="submit" class='button__box btn-b'>Отправить</button>
+    </form>
+
+    <div class="close-popup">
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,107 @@
+// Mixins.
+
+@mixin nl {
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+  list-style: none;
+  list-style-position: outside;
+}
+
+@mixin cf {
+
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+  }
+
+  &:after {
+    clear: both;
+  }
+
+  .lt-ie8 & {
+    zoom: 1;
+  }
+}
+
+@mixin blocks-justify {
+  text-align: justify;
+  text-justify: newspaper;
+}
+
+// You can add your own mixins here:
+@mixin position($position) {
+  @if $position==center {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+  }
+
+  @if $position==centerY {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+  }
+
+  @if $position==centerX {
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+  }
+
+  @if $position==none {
+    position: relative;
+    transform: translate(0, 0);
+    top: auto;
+    left: auto;
+  }
+}
+
+
+$tablet: 768px; //tablet
+// $tablet-l: 1700px; //tablet, tablet landscape, small pc
+$laptop: 1200px; //pc, laptop
+$dmac: 1400px; // stupid mac
+$desctop: 1600px; //pc (*optional)
+$lagre: 1900px; //large view port width pc (*optional)
+
+
+@mixin respond-to($media) {
+  @if $media==t {
+    @media only screen and (min-width: $tablet) {
+      @content;
+    }
+  }
+
+  @else if $media==tl {
+    @media only screen and (min-width: $tablet) and (orientation: landscape) {
+      @content;
+    }
+  }
+
+  @else if $media==lp {
+    @media only screen and (min-width: $laptop) {
+      @content;
+    }
+  }
+
+  @else if $media==dmac {
+    @media only screen and (min-width: 1350px) and (max-width: 1700px) {
+      @content;
+    }
+  }
+
+  @else if $media==d {
+    @media only screen and (min-width: $desctop) {
+      @content;
+    }
+  }
+
+  @else if $media==lg {
+    @media only screen and (min-width: $lagre) {
+      @content;
+    }
+  }
+}

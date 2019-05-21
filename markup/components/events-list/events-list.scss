@@ -1,0 +1,326 @@
+.event {
+  padding: 80px 0;
+  height: 100%;
+
+  @include respond-to(lp) {
+    width: 90%;
+  }
+
+  @include respond-to(lp) {
+    width: 80%;
+  }
+
+  &__list {
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+
+      @include respond-to(t) {
+        justify-content: space-around;
+      }
+    }
+
+    .btn-b {
+      margin-bottom: 90px;
+
+      @include respond-to(lp) {
+        margin-bottom: 0;
+        position: absolute;
+        bottom: 140px;
+        left: calc(50% + 130px);
+      }
+
+      @include respond-to(lg) {
+        left: 50%;
+      }
+    }
+  }
+
+  &__list-wrap {
+    position: relative;
+
+    @include respond-to(lp) {
+      display: flex;
+      padding: 200px 0 0;
+    }
+
+    @include respond-to(lg) {
+      padding: 200px 0 50px;
+    }
+  }
+
+  &__list-header {
+    font-family: $MontSemiBold;
+    font-size: 22px;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 40px;
+
+    @include respond-to(t) {
+      font-size: 30px;
+    }
+
+    @include respond-to(lp) {
+      position: absolute;
+      top: 70px;
+      left: -5%;
+    }
+
+    @include respond-to(lg) {
+      font-size: 40px;
+      left: 0;
+    }
+  }
+
+  &__items {
+    position: relative;
+    height: auto;
+    margin-bottom: 90px;
+
+    @include respond-to(lp) {
+      margin-top: 30px;
+      margin-bottom: 40px;
+      min-height: 400px;
+      min-width: 540px;
+    }
+
+    @include respond-to(lg) {
+      margin-top: 45px;
+      margin-right: 250px;
+      min-height: 480px;
+      min-width: 580px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    width: 100%;
+    padding: 0 5%;
+    min-height: 170px;
+    display: flex;
+
+    @include respond-to(t) {
+      padding: 0;
+      width: 540px;
+      margin-bottom: 90px;
+    }
+
+    @include respond-to(lg) {
+      width: 580px;
+    }
+  }
+
+  &__item-link {
+    &:hover {
+      .event-img {
+        transform: scale(1.05);
+      }
+
+      .event-title {
+        opacity: .7;
+      }
+    }
+  }
+
+  &__item-content {
+    width: calc(100% - 135px);
+    font-family: $MontSemiBold;
+
+    @include respond-to(t) {
+      width: calc(100% - 195px);
+    }
+
+    @include respond-to(lg) {
+      width: calc(100% - 215px);
+    }
+  }
+
+
+  &-img {
+    width: 115px;
+    height: 115px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 20px;
+    transition: all .8s ease;
+
+    @include respond-to(t) {
+      width: 155px;
+      height: 155px;
+      margin-right: 40px;
+    }
+
+    @include respond-to(lg) {
+      width: 175px;
+      height: 175px;
+    }
+  }
+
+  &__white-link {
+    width: 100%;
+    height: 100%;
+
+  }
+
+  &__block-white {
+    width: 255px;
+    height: 190px;
+    background: #fff;
+    position: relative;
+    margin: 0 auto;
+    padding: 25px 20px 0 80px;
+    font-family: $MontSemiBold;
+
+    @include respond-to(t) {
+      width: 400px;
+      height: 250px;
+      left: unset;
+      right: unset;
+      bottom: unset;
+      display: flex;
+      flex-direction: column;
+      padding: 60px 40px 20px 140px;
+    }
+
+    @include respond-to(d) {
+      width: 450px;
+    }
+
+    @include respond-to(lg) {
+      width: 550px;
+      height: 330px;
+      padding: 80px 40px 20px 185px;
+    }
+
+    &:hover {
+      .event-title {
+        opacity: .7;
+      }
+    }
+  }
+
+  &-big_date {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    top: 20px;
+    left: -25px;
+    color: #fff;
+    background: #C6ADA3;
+    padding: 5px 20px 0 25px;
+    font-family: $MontBold;
+    text-align: right;
+
+
+    @include respond-to(t) {
+      width: 115px;
+      height: 115px;
+      top: 30px;
+      left: -30px;
+      padding: 20px 20px 0 25px;
+    }
+
+    @include respond-to(lp) {
+      width: 145px;
+      height: 145px;
+    }
+
+    @include respond-to(lg) {
+      width: 200px;
+      height: 200px;
+      top: 45px;
+      left: -45px;
+      padding: 20px 30px 0 40px;
+    }
+  }
+
+  &-day {
+    font-size: 40px;
+    line-height: 52px;
+    letter-spacing: 5px;
+
+    @include respond-to(t) {
+      font-size: 64px;
+      line-height: 75px;
+    }
+
+    @include respond-to(lg) {
+      font-size: 74px;
+      line-height: 96px;
+    }
+  }
+
+  &-month {
+    font-size: 14px;
+    line-height: 18px;
+    font-family: $MontSemiBold;
+
+    @include respond-to(t) {
+      font-size: 20px;
+    }
+  }
+
+  &-subtitle {
+    text-transform: uppercase;
+    color: rgba($text-color, .3);
+    font-size: 12px;
+    line-height: 28px;
+
+    @include respond-to(t) {
+      font-size: 14px;
+    }
+
+    @include respond-to(lg) {
+      font-size: 18px;
+    }
+  }
+
+  &-title {
+    color: $header-color;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 5px;
+    transition: all .8s ease;
+
+    @include respond-to(t) {
+      font-size: 18px;
+      padding-right: 20px;
+      margin-bottom: 15px;
+    }
+
+    @include respond-to(lg) {
+      font-size: 22px;
+    }
+  }
+
+  &-date {
+    font-size: 14px;
+    line-height: 1.5;
+    color: rgba($text-color, .3);
+    cursor: pointer;
+
+    @include respond-to(t) {
+      display: inline;
+      font-size: 18px;
+    }
+  }
+
+  &-price {
+    font-size: 14px;
+    line-height: 1.5;
+    color: rgba($text-color, .3);
+    cursor: pointer;
+
+    @include respond-to(t) {
+      display: inline;
+      font-size: 18px;
+      margin-right: 40px;
+    }
+  }
+
+
+
+}

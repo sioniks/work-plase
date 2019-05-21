@@ -1,0 +1,47 @@
+<div class="popup popup__feedback-wrap">
+  <div class="popup-sublayer"></div>
+  <div class="popup__feedback-block big_form">
+    <div class="big_form-header">Обратная связь</div>
+    <form action="/test.php" class="full-form" id="full-form">
+
+      <div class="empty-inputs">
+        <div class="input-group">
+          <label for="#name" class="input-title">Ваше имя:</label>
+          <input type="text" name='name' id="name" value='' class="input-field" placeholder="Введите ваше имя">
+        </div>
+        <div class="input-group">
+          <label for="#phone" class="input-title">Телефон:</label>
+          <input type="tel" name='tel' id="phone" value='' class="input-field" required placeholder="Телефон">
+        </div>
+        <div class="input-group">
+          <label for="#mail" class="input-title">Email:</label>
+          <input type="email" name="mail" id="mail" value='' class="input-field" required placeholder="Email">
+        </div>
+
+        <div class="input-group ">
+          <label for="#theme" class="input-title">Тема:</label>
+          <input type="text" id="theme" value='' class="input-field" hidden>
+          <select class="js-drop location custom-select" name='appeal_type'>
+
+            <option class="item" value="platforma">Платформа</option>
+            <option class="item" value="leonardo">Леонардо</option>
+            <option class="item" value="megacity">Мегамаркет</option>
+            <option class="item" value="atb">АТБ</option>
+
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label for="#comment" class="input-title">Комментарий:</label>
+          <textarea id="comment" name="comment" value='' class="input-field comment" required placeholder="Введите текст"></textarea>
+        </div>
+      </div>
+      <button type="submit" class='button__box btn-b'>Отправить</button>
+    </form>
+
+    <div class="close-popup">
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</div>

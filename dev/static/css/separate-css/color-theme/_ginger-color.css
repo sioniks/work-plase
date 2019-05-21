@@ -1,0 +1,103 @@
+.page__one-location .header__wrap {
+  background-color: #F7F1EC;
+}
+
+.page__one-location .header__wrap.full {
+  background-color: #BE7A42;
+}
+
+
+@media only screen and (min-width: 1200px) {
+  .page__one-location .header__wrap.full .menu-link {
+    color: #F7F1EC;
+  }
+
+  .page__one-location .header__wrap.full .custom-select-trigger {
+    color: #F7F1EC;
+  }
+
+  .page__one-location .header__wrap.full .custom-select-trigger:after {
+    border-bottom: 2px solid #F7F1EC;
+    border-right: 2px solid #F7F1EC;
+  }
+}
+
+.page__one-location .location__wrap.full .section {
+  background-color: #BE7A42;
+}
+
+.page__one-location .location-subtitle {
+  color: #F7F1EC;
+}
+
+.page__one-location .section {
+  background-color: #F7F1EC;
+}
+
+.page__one-location .head-supheader {
+  color: #F7F1EC;
+}
+
+.page__one-location .map-contact {
+  background-color: #BE7A42;
+}
+
+.page__one-location .map .leaflet-interactive {
+  fill: #BE7A42;
+}
+
+.page__one-location .workplace-icon .icon-svg {
+  fill: #BE7A42;
+}
+
+.page__one-location .workplace__item:nth-child(4) .color-bg:after,
+.page__one-location .workplace__item:nth-child(5) .workplace-img:after {
+  background-color: #BE7A42;
+}
+
+.page__one-location .price {
+  background-color: #BE7A42;
+}
+
+.page__one-location .price__nav-text {
+  background-color: #E1AA7D;
+}
+
+.page__one-location .price__card {
+  background-color: #F7F1EC;
+}
+
+.page__one-location .price__card.one-card:nth-child(odd) {
+  background-color: #EBBF9C;
+}
+
+.page__one-location .price__card.two-card:nth-child(odd) {
+  background-color: #EBBF9C;
+}
+
+.page__one-location .price__card.three-card:nth-child(odd) {
+  background-color: #EBBF9C;
+}
+
+.page__one-location .price__card.four-card:nth-child(3n+1) {
+  background-color: #EBBF9C;
+}
+
+.page__one-location .price__card.more:nth-child(odd) {
+  background-color: #EBBF9C;
+}
+
+.page__one-location .event-big_date {
+  background-color: #E1AA7D;
+}
+
+.page__one-location .control__panel .loc-btn {
+  color: #BE7A42;
+}
+
+.page__one-location .footer-full .footer-top,
+.page__one-location .footer-full .footer-center {
+  background-color: #F7F1EC;
+}
+
+/*# sourceMappingURL=_ginger-color.css.map */

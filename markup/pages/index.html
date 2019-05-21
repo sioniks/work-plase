@@ -1,0 +1,151 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+<head>
+  {{> head/head head.defaults}}
+
+</head>
+
+<body class="page page-home">
+
+  {{> header/header}}
+
+
+  <main class="section__wrap">
+    <section class="hs section section-n1 active" data-sec="s1">
+      <div class="block block-left col-e">
+        <div class="section-h3">Не только коворкинг</div>
+        <div class="section-text">Platforma это идеальное пространство для работы, обучения, нетворкинга
+          и общения с успешными
+          и интересными людьми</div>
+
+        {{> button/button
+        class='open-form btn-b'
+        text='Забронировать визит'
+        }}
+      </div>
+      <div class="block block-right">
+        {{> slider/slider }}
+      </div>
+    </section>
+    <section class="hs section section-n2" data-sec="s2">
+      <div class="block block-left col-e">
+        <div class="section-h3">Своя атмосфера для каждого</div>
+        <div class="section-text">Локации для вдохновения или бизнес-переговоров, вдали от шумного города или в самом
+          центре мегаполиса</div>
+
+        {{> button/button-link
+        class='btn-b'
+        text='Локации'
+        }}
+      </div>
+      <div class="block block-right">
+        {{> slider/slider
+        class='slider-two'
+        }}
+      </div>
+    </section>
+    <section class="hs section section-n3" data-sec="s3">
+      <div class="block block-left col-e">
+        <div class="section-h3">Образование и события</div>
+        <div class="section-text">Множество образовательных программ, регулярные ивенты с лидирующими спикерами,
+          эксклюзивные интервью</div>
+        <div class="button-wrap">
+          {{> button/button-link
+          class='btn-b'
+          text='Все статьи'
+          }}
+
+          {{> button/button-link
+          class='btn-w'
+          text='Все события'
+          }}
+        </div>
+
+
+      </div>
+      <div class="block block-right">
+        <div class="news__block">
+          <div class="news-img"></div>
+          <div class="news__content">
+            <div class="news-header">Название данной статьи блога коворкинга</div>
+            <div class="news__subscribe">
+              <div class="news-date">12.07.2018</div>
+              <div class="news-titel">Новости</div>
+            </div>
+          </div>
+        </div>
+        <div class="ivent__block">
+          <div class="ivent-big_date">
+            <span class="ivent-day">24</span>
+            <span class="ivent-month">ноя</span>
+          </div>
+          <div class="ivent-subtitle">Здоровье</div>
+          <div class="ivent-title">Разбуди свой инстинкт крипто-трейдера</div>
+          <div class="ivent-date">24 ноя 19:00 - 21:00</div>
+          <div class="ivent-price">200 грн</div>
+        </div>
+      </div>
+    </section>
+    <section class="hs section section-n4" data-sec="s4">
+      <div class="block block-left col-e">
+        <div class="section-h3">Варианты размещений</div>
+        <div class="section-text">Окружение успешных людей и приятные бонусы, уютные лаунж-зоны, где можно поработать и
+          отдохнуть с партнерами, еженедельные happy hours, чтобы резиденты познакомились друг с другом</div>
+
+        {{> button/button-link
+        class='btn-b'
+        text='Тарифы'
+        }}
+
+      </div>
+      <div class="block block-right">
+        {{> slider/slider }}
+      </div>
+    </section>
+    <section class="hs section section-n5" data-sec="s5">
+      <div class="block block-left col-e">
+        <div class="section-h3">Контакты</div>
+        <div class="contact__wrap col-s">
+          <a href="/" class="contact-link mail">
+            <span class="icon"></span>
+            <div class="link-text">we@coworkingplatforma.com</div>
+          </a>
+          <a href="/" class="contact-link phone">
+            <span class="icon"></span>
+            <div class="link-text">+38 044 390 88 27</div>
+          </a>
+          <a href="/" class="contact-link location">
+            <span class="icon"></span>
+            <div class="link-text">ул. Беломорская, 1а</div>
+          </a>
+        </div>
+        {{> button/button-link
+        class='btn-b'
+        text='Обратная связь'
+        }}
+      </div>
+      <div class="block block-right col-e">
+        <div class="content">
+          <div class="h5">Сотрудничество с Platforma</div>
+          <div class="text">Присылайте свои предложения
+            на info@coworkingplatforma.com
+            c темой письма "Запрос на сотрудничество"</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  {{> footer/footer}}
+
+  <!-- <script src="%=static=%js/separate-js/svg4everybody.min.js"></script>
+            <script>svg4everybody();</script> -->
+
+  <!-- Main scripts. You can replace it, but I recommend you to leave it here     -->
+  <script src="%=static=%js/main%=hash=%%=min=%.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+<div class="price__card">
+  <div class="price__card-header">{{ header }}</div>
+  <div class="cost-wrap">
+    <div class="price__card-cost">{{price}}<sup class="sup-cost">{{supprice}}</sup></div>
+    <div class="price__card-costdetail">{{price-detail}}</div>
+  </div>
+  <div class="price__card-text">{{text}}</div>
+  <div class="link-wrap">
+    {{> button/button-link
+    class='btn-w price__card-btn'
+    text='Оформить заявку'
+    }}
+    <a href="{{link}}" class="price__card-link">Детальнее про тариф</a>
+  </div>
+</div>

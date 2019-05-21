@@ -1,0 +1,1068 @@
+.page-post {
+
+  .header__wrap,
+  .footer-full .footer-top,
+  .footer-full .footer-center {
+    background-color: #F9F6F5;
+  }
+
+  &.page-event {
+
+    .header__wrap,
+    .footer-full .footer-top,
+    .footer-full .footer-center,
+    .event__list {
+      background-color: #eef3ff;
+    }
+
+    .post__img-wrap.colorbg:after {
+      background-color: #eef3ff;
+    }
+
+    .event__list-wrap {
+      width: 100%;
+
+      @include respond-to(t) {
+        width: 80%;
+      }
+
+      .event__item {
+        margin-bottom: 20px;
+
+        @include respond-to(t) {
+          margin-bottom: 90px;
+        }
+      }
+    }
+
+    .event__list-header {
+      left: -5%;
+    }
+
+    .event-big_date {
+      @include respond-to(t) {
+        width: 145px;
+        height: 145px;
+      }
+
+      @include respond-to(lg) {
+        width: 200px;
+        height: 200px;
+      }
+    }
+
+  }
+}
+
+.post {
+  overflow-x: hidden;
+  padding-top: 125px;
+  line-height: 1.5;
+
+  .container {
+    width: 90%;
+    margin: 0 auto;
+
+    @include respond-to(t) {
+      width: 640px;
+    }
+
+    @include respond-to(lp) {
+      width: 1080px;
+    }
+
+    @include respond-to(lg) {
+      width: 1280px;
+    }
+  }
+
+  &-breadcrumbs {
+    font-size: 12px;
+    font-family: $MontSemiBold;
+    color: #000;
+    margin-bottom: 30px;
+
+    @include respond-to(t) {
+      font-size: 14px;
+    }
+
+    @include respond-to(lp) {
+      font-size: 16px;
+    }
+
+    @include respond-to(lg) {
+      font-size: 18px;
+      margin-bottom: 70px;
+    }
+
+    span {
+      position: relative;
+      margin-right: 30px;
+    }
+
+    .crumb-link {
+      color: #B9B9B9;
+      position: relative;
+      margin-right: 30px;
+
+      &:after {
+        position: relative;
+        content: '/';
+        display: inline;
+        left: 15px;
+      }
+    }
+  }
+
+  &-infoline {
+    font-size: 14px;
+    font-family: $MontMedium;
+    color: #ccc;
+    margin-bottom: 30px;
+
+    @include respond-to(t) {
+      font-size: 16px;
+      width: 80%;
+      margin: 0 auto 30px;
+    }
+
+    @include respond-to(lp) {
+      font-size: 18px;
+    }
+
+    @include respond-to(lg) {
+      font-size: 22px;
+      margin: 0 auto 70px;
+    }
+  }
+
+  &-date {
+    display: inline;
+    margin-right: 50px;
+
+    &:after {
+      position: relative;
+      content: '|';
+      display: inline;
+      left: 25px;
+    }
+  }
+
+  &-label {
+    display: inline;
+  }
+
+  &-header {
+    font-size: 30px;
+    font-family: $MontExtraBold;
+    color: #000;
+    margin-bottom: 30px;
+
+    @include respond-to(t) {
+      font-size: 38px;
+      width: 80%;
+      margin: 0 auto 30px;
+    }
+
+    @include respond-to(lp) {
+      font-size: 48px;
+    }
+
+    @include respond-to(lg) {
+      font-size: 58px;
+      margin: 0 auto 70px;
+    }
+  }
+
+  &__author {
+    &-info {
+      font-size: 12px;
+      font-family: $MontExtraBold;
+      color: #000;
+
+      @include respond-to(t) {
+        font-size: 14px;
+        width: 80%;
+        margin: 0 auto;
+      }
+
+      @include respond-to(lg) {
+        font-size: 16px;
+      }
+    }
+
+    &-name {
+      margin-bottom: 20px;
+
+    }
+
+    &-link {
+      margin-bottom: 20px;
+
+    }
+  }
+
+  &__ticket {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 50px 10px;
+    margin-bottom: 50px;
+
+    @include respond-to(lp) {
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 60px 10px 90px;
+    }
+
+    @include respond-to(lg) {
+      padding: 90px 10px 120px;
+    }
+
+    .color-block {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      background-color: #eef3ff;
+
+      @include respond-to(t) {
+        width: 85%;
+      }
+
+      @include respond-to(lp) {
+        width: 55%;
+      }
+    }
+
+    &-imgwrap {
+      width: 100%;
+      position: relative;
+      padding-bottom: 60%;
+      height: 0;
+      z-index: 1;
+      margin-bottom: 55px;
+
+      @include respond-to(lp) {
+        width: 50%;
+        padding-bottom: 30%;
+      }
+
+      @include respond-to(lg) {
+        margin-bottom: 0;
+      }
+    }
+
+    &-img {
+      position: absolute;
+      z-index: 1;
+      left: 20px;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+
+      @include respond-to(t) {
+        left: 70px;
+        width: 97%;
+      }
+
+      @include respond-to(lp) {
+        left: 0;
+        width: 100%;
+      }
+    }
+
+    &-info {
+      position: relative;
+      z-index: 1;
+
+      @include respond-to(t) {
+        padding-right: calc(15% + 70px);
+      }
+
+      @include respond-to(lp) {
+        width: 50%;
+        padding-right: 40px;
+      }
+
+
+      .info-item {
+        width: 100%;
+        color: #000;
+        font-size: 14px;
+        padding-left: 20px;
+
+        @include respond-to(t) {
+          padding-left: 70px;
+        }
+
+        @include respond-to(lg) {
+          padding-left: 150px;
+        }
+      }
+
+      .title {
+        font-family: $MontSemiBold;
+        margin-bottom: 10px;
+
+        @include respond-to(t) {
+          font-size: 18px;
+        }
+
+        @include respond-to(lg) {
+          font-size: 22px;
+        }
+      }
+
+      .text {
+        font-family: $MontMedium;
+        margin-bottom: 40px;
+
+        @include respond-to(t) {
+          font-size: 16px;
+        }
+
+        @include respond-to(lg) {
+          font-size: 18px;
+        }
+      }
+    }
+
+    &-link {
+      margin-bottom: 40px;
+    }
+
+    .btn-b {
+      margin: 0 auto;
+      display: block;
+      width: 260px;
+
+      @include respond-to(t) {
+        margin-left: 70px;
+      }
+
+      @include respond-to(lg) {
+        margin-left: 150px;
+      }
+    }
+  }
+
+  &__text {
+    &-wrap {
+      margin-bottom: 30px;
+      color: #000;
+
+      @include respond-to(t) {
+        width: 80%;
+        margin: 0 auto 30px;
+      }
+
+      @include respond-to(lp) {
+        margin: 0 auto 50px;
+      }
+
+      @include respond-to(lg) {
+        margin: 0 auto 80px;
+      }
+
+      h1 {}
+
+      h2 {}
+
+      h3 {}
+
+      h4 {}
+
+      h5 {}
+
+      h6 {}
+
+      ul {
+        font-size: 14px;
+        font-family: $MontSemiBold;
+        padding-inline-start: 20px;
+
+        @include respond-to(t) {
+          font-size: 16px;
+        }
+
+        @include respond-to(lg) {
+          font-size: 18px;
+        }
+
+        li {
+          padding-left: 10px;
+        }
+      }
+
+      p {
+        font-size: 14px;
+        font-family: $MontRegular;
+        color: #323333;
+
+        @include respond-to(t) {
+          font-size: 16px;
+        }
+
+        @include respond-to(lg) {
+          font-size: 18px;
+        }
+      }
+
+      ol {
+        font-size: 14px;
+        font-family: $MontSemiBold;
+        padding-inline-start: 20px;
+
+        @include respond-to(t) {
+          font-size: 16px;
+        }
+
+        @include respond-to(lg) {
+          font-size: 18px;
+        }
+
+        li {
+          padding-left: 5px;
+        }
+      }
+    }
+
+    &-header {
+      font-size: 22px;
+      font-family: $MontSemiBold;
+      margin-bottom: 20px;
+
+      @include respond-to(t) {
+        font-size: 30px;
+      }
+
+      @include respond-to(lg) {
+        font-size: 42px;
+      }
+    }
+
+    &-body {
+      font-size: 14px;
+      font-family: $MontMedium;
+      // color: #a4a4a4;
+
+      @include respond-to(t) {
+        font-size: 16px;
+      }
+
+      @include respond-to(lg) {
+        font-size: 18px;
+      }
+    }
+
+
+
+  }
+
+  &__img {
+    &-wrap {
+      width: 100%;
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      margin-bottom: 55px;
+
+      @include respond-to(lg) {
+        margin-bottom: 90px;
+      }
+
+      &.colorbg {
+        &:after {
+          content: '';
+          position: absolute;
+          top: 10px;
+          left: -10px;
+          width: 100%;
+          height: 100%;
+          background-color: #987774;
+          z-index: 0;
+
+          @include respond-to(t) {
+            top: 18px;
+            left: -18px;
+          }
+
+          @include respond-to(t) {
+            top: 25px;
+            left: -25px;
+          }
+        }
+      }
+
+      .post-img {
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+      }
+    }
+  }
+
+  &__quote {
+    width: 120%;
+    position: relative;
+    left: -10%;
+    padding: 50px 30px 60px 30px;
+    background-color: #F9F6F5;
+    font-family: $MontMedium;
+    color: #000;
+    margin-bottom: 50px;
+
+    @include respond-to(t) {
+      width: 100%;
+      left: 0;
+      padding: 60px;
+      margin-bottom: 70px;
+    }
+
+    @include respond-to(lp) {
+      padding: 80px 110px;
+      margin-bottom: 100px;
+    }
+
+    &-text {
+      font-size: 16px;
+      text-align: center;
+      margin-bottom: 50px;
+
+      @include respond-to(lp) {
+        font-size: 18px;
+      }
+
+      @include respond-to(lg) {
+        font-size: 22px;
+      }
+    }
+
+    &-author {
+      font-size: 14px;
+      text-align: right;
+      font-family: $MontSemiBold;
+
+      @include respond-to(lg) {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__doubleimg-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    @include respond-to(t) {
+      flex-direction: row;
+    }
+
+    @include respond-to(lp) {
+      width: 80%;
+      margin: 0 auto 50px;
+    }
+
+    @include respond-to(lg) {
+      margin: 0 auto 80px;
+    }
+
+    .post-doubleimg {
+      width: 100%;
+      position: relative;
+      padding-bottom: 142%;
+      height: 0;
+      margin-bottom: 30px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+
+      @include respond-to(t) {
+        width: 47%;
+        padding-bottom: 64%;
+      }
+    }
+  }
+
+  &__slider-wrap {
+    margin-bottom: 30px;
+
+    @include respond-to(lp) {
+      margin-bottom: 70px;
+    }
+
+    .cd-slider {
+      min-height: 450px;
+
+      @include respond-to(t) {
+        min-height: 500px;
+      }
+
+      @include respond-to(lp) {
+        min-height: 565px;
+      }
+
+      @include respond-to(lg) {
+        min-height: 620px;
+      }
+
+      li {
+        height: calc(100% - 120px);
+
+        @include respond-to(t) {
+          height: 100%;
+        }
+      }
+
+      .slider__content {
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        border: 1px solid rgba(#000, .2);
+
+
+        @include respond-to(t) {
+          width: 450px;
+          height: 130px;
+          left: 50%;
+          bottom: 40px;
+          border: none;
+          transform: translate(-55%, 0);
+        }
+      }
+
+
+      .slider__control_prev {
+        top: -70px;
+        right: -1px;
+
+        @include respond-to(t) {
+          top: unset;
+          bottom: 0px;
+        }
+      }
+
+      .slider__control_next {
+        top: 0;
+
+        @include respond-to(t) {
+          top: unset;
+          bottom: 0;
+        }
+      }
+
+      .image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: 50% 50%;
+        clip: rect(0, 120vw, 120vw, 120vw);
+        transition: clip 1.5s ease;
+        // transition: clip 1.5s cubic-bezier(0.99, 0.01, 0.45, 0.9) .5s; 
+        will-change: clip;
+
+        @include respond-to(lg) {
+          clip: rect(0, 100vw, 100vw, 100vw);
+        }
+      }
+
+      li.current .image {
+        clip: rect(0, 120vw, 120vw, 0);
+
+        @include respond-to(t) {
+          clip: rect(0, 100vw, 100vw, 0);
+        }
+      }
+
+      li.prev_slide .image {
+        clip: rect(0, 0, 120vw, 0);
+
+        @include respond-to(t) {
+          clip: rect(0, 0, 100vw, 0);
+        }
+      }
+    }
+  }
+
+  .subscribe {
+    margin-bottom: 50px;
+    position: relative;
+
+    @include respond-to(t) {
+      height: 200px;
+      padding-top: 100px;
+      border-top: 1px solid rgba(#000, .2);
+    }
+
+    .social {
+      &__block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 0 50px 0;
+        margin-bottom: 50px;
+        border-bottom: 1px solid rgba(#000, .2);
+
+        @include respond-to(t) {
+          bottom: 20%;
+          left: -3%;
+          z-index: 100;
+          border: none;
+          margin: 0;
+          padding: 0;
+          position: fixed;
+          min-height: 300px;
+        }
+
+        @include respond-to(lp) {
+          left: 0;
+        }
+      }
+
+      &-header {
+        font-size: 14px;
+        font-family: $MontExtraBold;
+        opacity: .2;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        position: relative;
+
+        @include respond-to(t) {
+          transform: rotate(-90deg);
+
+          &:before {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 2px;
+            background-color: #000;
+            opacity: .4;
+            left: -50px;
+            top: 10px;
+          }
+        }
+      }
+
+      &__links {
+        display: flex;
+
+        @include respond-to(t) {
+
+          margin-top: 100px;
+          position: relative;
+          flex-direction: column;
+        }
+      }
+
+      &__link {
+        margin: 5px;
+        cursor: pointer;
+        width: 80px;
+        height: 30px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        transition: all .5s ease;
+
+        &:hover {
+          opacity: .7;
+        }
+
+        @include respond-to(t) {
+
+          // margin: 5px;
+          width: 30px;
+          height: 80px;
+          text-align: center;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .icon-svg {
+          width: 25px;
+          height: 25px;
+          display: block;
+          margin-right: 15px;
+          fill: #000;
+          opacity: .3;
+
+          @include respond-to(t) {
+            margin: 0;
+          }
+
+          &.fb {
+            width: 22px;
+            margin-right: 2px;
+
+            @include respond-to(t) {
+              margin: 0;
+              width: 25px;
+            }
+          }
+        }
+
+        .like-count {
+          width: 100%;
+          margin-top: 10px;
+          display: block;
+          font-size: 14px;
+          line-height: 1;
+          font-family: $MontMedium;
+          opacity: .2;
+
+        }
+      }
+    }
+
+    &-header {
+      font-family: $MontSemiBold;
+      font-size: 18px;
+      text-align: center;
+      padding-bottom: 25px;
+
+      @include respond-to(t) {
+        width: 100%;
+        position: absolute;
+        top: 40px;
+      }
+
+      @include respond-to(lp) {
+        width: 32%;
+        position: relative;
+        top: unset;
+        padding-bottom: 0;
+        padding-right: 50px;
+        text-align: left;
+      }
+
+      @include respond-to(lg) {
+        width: 30%;
+      }
+
+
+    }
+
+    .form-block {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      @include respond-to(t) {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+      }
+
+      @include respond-to(lp) {
+        justify-content: center;
+      }
+    }
+
+    .info__wrap-input {
+      position: relative;
+      margin-bottom: 20px;
+
+      @include respond-to(t) {
+        margin-bottom: 0;
+      }
+
+      &.has-error {
+        .some-error {
+          visibility: visible;
+          opacity: 1;
+        }
+
+        .info__mail-input {
+          border: 2px solid #E82D2D;
+        }
+      }
+
+      .some-error {
+        position: relative;
+        display: block;
+        visibility: hidden;
+        opacity: 0;
+        bottom: -10px;
+        left: 0;
+        font-size: 14px;
+        font-family: $MontSemiBold;
+        color: #E82D2D;
+        transition: all .5s ease;
+
+        @include respond-to(lp) {
+          position: absolute;
+          bottom: -20px;
+        }
+      }
+    }
+
+    .info__mail-input {
+      font-family: $MontSemiBold;
+      font-size: 15px;
+      padding: 0 28px;
+      min-width: 265px;
+      height: 65px;
+      line-height: 1;
+      text-align: left;
+      position: relative;
+      cursor: pointer;
+      // text-transform: uppercase;
+      display: inline-block;
+      border: 2px solid #d7d7d7;
+      background: transparent;
+
+
+      &::placeholder {
+        color: #d7d7d7;
+        // text-transform: uppercase;
+      }
+
+      &:active,
+      &:focus {
+        text-transform: lowercase;
+        border: 2px solid #8A8A8A;
+
+        &::placeholder {
+          opacity: 0;
+        }
+      }
+
+      @include respond-to(t) {
+        margin-right: 20px;
+      }
+
+      @include respond-to(lp) {
+        margin: 0 30px 0 0;
+        min-width: 300px;
+      }
+    }
+  }
+
+
+
+}
+
+.another__posts {
+  background-color: #F9F6F5;
+  padding: 75px 0 80px 0;
+
+  @include respond-to(lp) {
+    padding-bottom: 100px;
+  }
+
+  &-header {
+    font-family: $MontSemiBold;
+    font-size: 22px;
+    margin-bottom: 50px;
+  }
+
+  &-list {
+    margin-bottom: 30px;
+
+    @include respond-to(t) {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+    }
+  }
+
+  &-item {
+    margin-bottom: 50px;
+    display: block;
+
+    @include respond-to(t) {
+      width: 45%;
+    }
+
+    @include respond-to(lp) {
+      width: 24%;
+    }
+
+    &:hover {
+      .posts-img {
+        transform: scale(1.05)
+      }
+
+      .posts-text_header {
+        opacity: .7;
+      }
+    }
+  }
+
+  .posts-img_wrap {
+    width: 100%;
+    position: relative;
+    padding-bottom: 60%;
+    height: 0;
+    margin-bottom: 25px;
+    overflow: hidden;
+    cursor: pointer;
+
+
+
+    .posts-img {
+      transition: all .8s ease;
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+    }
+  }
+
+  .posts-text_header {
+    font-family: $MontSemiBold;
+    font-size: 14px;
+    margin-bottom: 25px;
+    color: #000;
+  }
+
+  .posts-text_description {
+    font-family: $MontSemiBold;
+    font-size: 14px;
+    color: #000;
+    opacity: .2;
+    display: flex;
+    cursor: default;
+
+    .descr_date {
+      margin-right: 20px;
+      padding-right: 20px;
+
+      &:after {
+        position: relative;
+        content: '|';
+        display: inline;
+        left: 20px;
+      }
+    }
+  }
+
+  .btn-b {
+    margin: 0 auto;
+    display: block;
+    width: 270px;
+  }
+}

@@ -1,0 +1,66 @@
+// Common styles of the project
+@import '../scss/separate-css/_onepage-scroll.scss';
+@import '../scss/separate-css/_jquery_fancybox.scss';
+@import 'owl.carousel/src/scss/owl.carousel.scss';
+@import 'owl.carousel/src/scss/owl.theme.default.scss';
+
+html,
+body {
+  height: auto;
+  overflow: unset;
+  scroll-behavior: smooth;
+
+  &.page-home {
+    @include respond-to(lp) {
+      overflow: hidden;
+    }
+  }
+
+  &.is-iphone {
+    cursor: pointer;
+  }
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: auto;
+  position: relative;
+
+  &.page-home {
+    @include respond-to(lp) {
+      height: 100vh;
+    }
+  }
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $header-color;
+  cursor: pointer;
+}
+
+.svg-wrapper {
+  display: none;
+}
+
+input[type=text],
+input[type=email] {
+  appearance: none;
+  border-radius: 0;
+}
+
+
+@import '../../components/section/_section.scss';

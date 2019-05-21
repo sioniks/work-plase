@@ -1,0 +1,129 @@
+$color1: #7E5A74;
+$color2: #D2B8CA;
+$color3: #E0CBDA;
+$color4: #FBF6F9;
+
+
+.page__one-location {
+  .header__wrap {
+    background-color: $color4;
+
+    &.full {
+      background-color: $color1;
+
+      .menu-link {
+        color: $color4;
+      }
+
+      .custom-select-trigger {
+        @include respond-to(lp) {
+          color: $color4;
+        }
+
+        &:after {
+          @include respond-to(lp) {
+            border-bottom: 2px solid $color4;
+            border-right: 2px solid $color4;
+          }
+        }
+      }
+    }
+  }
+
+  .location {
+    &__wrap {
+      &.full {
+        .section {
+          background-color: $color1;
+        }
+      }
+    }
+
+    &-subtitle {
+      color: $color4;
+    }
+  }
+
+  .section {
+    background-color: $color4;
+  }
+
+  .head {
+    &-supheader {
+      color: $color4;
+    }
+  }
+
+  .map {
+    &-contact {
+      background-color: $color1;
+    }
+
+    .leaflet-interactive {
+      fill: $color1;
+    }
+  }
+
+  .workplace {
+    &-icon {
+      .icon-svg {
+        fill: $color1;
+      }
+    }
+
+    &__item:nth-child(5) {
+      .workplace-img:after {
+        background-color: $color1;
+      }
+    }
+  }
+
+  .price {
+    background-color: $color1;
+
+    &__nav-text {
+      background-color: $color2;
+    }
+
+    &__card {
+      background-color: $color4;
+    }
+
+    &__card.one-card:nth-child(odd) {
+      background-color: $color3;
+    }
+
+    &__card.two-card:nth-child(odd) {
+      background-color: $color3;
+    }
+
+    &__card.three-card:nth-child(odd) {
+      background-color: $color3;
+    }
+
+    &__card.four-card:nth-child(3n+1) {
+      background-color: $color3;
+    }
+
+    &__card.more:nth-child(odd) {
+      background-color: $color3;
+    }
+
+  }
+
+  .event-big_date {
+    background-color: $color2;
+  }
+
+  .control__panel .loc-btn {
+    color: $color1;
+  }
+
+  .footer-full {
+
+    & .footer-top,
+    & .footer-center {
+      background-color: $color4;
+    }
+  }
+}

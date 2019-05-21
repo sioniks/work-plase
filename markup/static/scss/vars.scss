@@ -1,0 +1,155 @@
+// File for scss-vars.
+// For example: main colors, paddings and so on.
+
+$black: #000000;
+$grey: #4a4a4a;
+$light-grey1: #cccccc;
+$light-grey2: #FE9705;
+$blue: #0018FF;
+$blue2: #0569FF;
+$white: #ffffff;
+$red: #D11313;
+$orange: #FE9705;
+$green: #3AC430;
+
+
+
+//--------------------main page
+$main-blue: #E5F8FF;
+$main-yellow: #FFFEF7;
+$main-red: #F8F4F3;
+$main-green: #E5F9EC;
+$main-orange: #F8F3ED;
+$main-purple: #EEE6FE;
+
+$main-bg1: $main-blue;
+$main-bg2: $main-yellow;
+$main-bg3: $main-red;
+$main-bg4: $main-green;
+$main-bg5: $main-purple;
+
+//--------------------main page
+
+$header-color: $black;
+$text-color: $grey;
+$link-color: $blue;
+
+//---цвета идут от самого темного - 1, до самого светлого - 4
+
+//------------------about
+$about: #007FB3,
+#54A8CB,
+#E5F8FF;
+// $about2: #54A8CB;
+// $about3: #E5F8FF;
+
+//------------------blog
+$blog1: #896A67;
+$blog2: #C6ADA3;
+$blog3: #F9F6F5;
+//------------------contact
+$contact1: #EECFAF;
+$contact2: #F8F3ED;
+//------------------price
+$price1: #4C9E71;
+$price2: #8BD2A4;
+$price3: #B4EAC7;
+$price4: #EFFFF5;
+//------------------event
+$blog1: #5669B6;
+$blog2: #B5C4F3;
+$blog3: #EFF4FF;
+
+
+//=======================================color theme
+
+//------------------orange
+$orange1: #DD7C56;
+$orange2: #EFAF77;
+$orange3: #F8D7B4;
+$orange4: #FCF4EC;
+//------------------bordo
+$bordo1: #6C3444;
+$bordo2: #DAB5C1;
+$bordo3: #EFD4DC;
+$bordo4: #FFF2F6;
+//------------------peach blush
+$peach1: #CB6F62;
+$peach2: #EFADA3;
+$peach3: #F9C3BB;
+$peach4: #FCF3F2;
+//------------------forest fern
+$forest1: #4C6553;
+$forest2: #AAC7B3;
+$forest3: #C6DDCD;
+$forest4: #EFF5F1;
+//------------------golden honey
+// $golden1: #A88A4A;
+// $golden2: #DBB667;
+// $golden3: #EAC983;
+// $golden4: #F7F3EC;
+//------------------lavender dream
+// $lavender1: #6C648A;
+// $lavender2: #B2ACC7;
+// $lavender3: #D0CBE1;
+// $lavender4: #F6F5FB;
+//------------------teal jungle
+// $jungle1: #51887F;
+// $jungle2: #98C2BB;
+// $jungle3: #A4CFC8;
+// $jungle4: #EDF3F2;
+//------------------mauve taupe
+// $mauve1: #7E5A74;
+// $mauve2: #D2B8CA;
+// $mauve3: #E0CBDA;
+// $mauve4: #FBF6F9;
+//------------------yale steel
+// $steel1: #41659B;
+// $steel2: #9CB2D2;
+// $steel3: #BDD0EC;
+// $steel4: #F1F4F9;
+//------------------ireland moss
+// $ireland1: #86955B;
+// $ireland2: #B7C68D;
+// $ireland3: #D0DEAC;
+// $ireland4: #F6FFF0;
+//------------------deep silver
+// $silver1: #5D6064; 
+// $silver2: #A4AAB5; 
+// $silver3: #BFC4CE; 
+// $silver4: #F2F4F7; 
+//------------------prussian stone
+// $prussian1: #365D7E;
+// $prussian2: #7DA6C8;
+// $prussian3: #9EC0DC;
+// $prussian4: #F1F5F9;
+//------------------ash rose 
+// $ash1: #A76C5A; 
+// $ash2: #D5AA9C; 
+// $ash3: #E1C2B8; 
+// $ash4: #F7F4F3; 
+//------------------morning mocco
+// $mocco1: #827161;
+// $mocco2: #CFB8A3;
+// $mocco3: #E3CDB8;
+// $mocco4: #F6F2EF;
+//------------------coffe cream
+// $coffe1: #AC7B62;
+// $coffe2: #EDC2A1;
+// $coffe3: #F5D2B7;
+// $coffe4: #FCF5F1;
+//------------------austrian night
+// $night1: #4F5E9C;
+// $night2: #9FABD9;
+// $night3: #ADB8E3;
+// $night4: #F2F3F8;
+//------------------soft olive
+// $olive1: #9A9568;
+// $olive2: #C9C293;
+// $olive3: #DFDAB1;
+// $olive4: #F7F6EE;
+//------------------ginger caramel
+// $caramel1: #BE7A42;
+// $caramel2: #E1AA7D;
+// $caramel3: #EBBF9C;
+// $caramel4: #F7F1EC;

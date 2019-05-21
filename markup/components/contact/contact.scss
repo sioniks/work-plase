@@ -1,0 +1,414 @@
+.page-contact {
+
+  .header__wrap,
+  .footer-full .footer-top,
+  .footer-full .footer-center {
+    background-color: #faf6ff;
+  }
+}
+
+.contact {
+
+  &-head {
+    height: 565px;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    overflow: hidden;
+
+    @include respond-to(t) {
+      height: 490px;
+    }
+
+    @include respond-to(lp) {
+      height: 580px;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding: 0 12% 50px;
+    }
+
+    @include respond-to(lg) {
+      height: 875px;
+      padding: 0 12% 80px;
+    }
+
+    .head-title {
+      margin-bottom: 50px;
+      text-align: center;
+      font-size: 36px;
+      font-family: $MontExtraBold;
+      color: #fff;
+
+      @include respond-to(t) {
+        font-size: 50px;
+        margin-bottom: 10px;
+      }
+
+      @include respond-to(lp) {
+        font-size: 70px;
+        margin-bottom: 190px;
+      }
+
+      @include respond-to(lg) {
+        font-size: 96px;
+        margin-bottom: 250px;
+      }
+    }
+
+    .info-block {
+      width: 280px;
+      height: 220px;
+      padding: 30px 20px 30px 30px;
+      color: #000;
+      background-color: #EEE6FE;
+      margin-bottom: 80px;
+
+      @include respond-to(t) {
+        width: 470px;
+        height: 250px;
+        padding: 40px 50px;
+        margin-bottom: 20px;
+      }
+
+      @include respond-to(lg) {
+        width: 580px;
+        height: 350px;
+        padding: 60px 80px;
+      }
+    }
+
+    .block-title {
+      font-size: 18px;
+      line-height: 1.2;
+      font-family: $MontSemiBold;
+      margin-bottom: 30px;
+
+      @include respond-to(t) {
+        font-size: 22px;
+      }
+
+      @include respond-to(lg) {
+        font-size: 30px;
+      }
+    }
+
+    .block-text {
+      font-size: 13px;
+      font-family: $MontMedium;
+      line-height: 1.5;
+
+      @include respond-to(t) {
+        font-size: 14px;
+      }
+
+      @include respond-to(lg) {
+        font-size: 18px;
+      }
+    }
+
+    .bg-img {
+      position: absolute;
+      z-index: -2;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+
+      img {
+        width: auto;
+        height: 100%;
+
+        @include respond-to(t) {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  &-info {
+    background-color: #faf6ff;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    height: auto;
+    padding: 85px 10% 25px;
+    line-height: 1.6;
+
+    @include respond-to(t) {
+      padding: 105px 55px 45px;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    @include respond-to(lp) {
+      padding: 110px 105px 45px;
+      align-items: flex-start;
+    }
+
+    @include respond-to(lg) {
+      padding: 180px 180px 45px;
+    }
+
+    .text-block {
+      text-align: center;
+      margin-bottom: 25px;
+
+      @include respond-to(t) {
+        width: 100%;
+      }
+
+      @include respond-to(lp) {
+        width: 40%;
+        text-align: left;
+      }
+
+      &_header {
+        font-size: 18px;
+        font-family: $MontSemiBold;
+        width: 70%;
+        margin: 0 auto 25px;
+
+        @include respond-to(t) {
+          font-size: 24px;
+        }
+
+        @include respond-to(lp) {
+          margin: 0 40px 15px 0;
+        }
+
+        @include respond-to(lg) {
+          font-size: 30px;
+        }
+      }
+
+      &_content {
+        font-size: 13px;
+        font-family: $MontMedium;
+        margin: 0 auto 25px;
+        color: #4a4a4a;
+
+        @include respond-to(t) {
+          font-size: 14px;
+          width: 75%;
+        }
+
+        @include respond-to(lp) {
+          margin: 0 40px 25px 0;
+        }
+
+        @include respond-to(lg) {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .adress-block {
+      text-align: left;
+      margin: 0 auto 25px;
+      width: 90%;
+
+      @include respond-to(lp) {
+        margin: 6px auto 25px;
+        width: 30%;
+      }
+
+      @include respond-to(t) {
+        &._first {
+          width: 60%;
+        }
+
+        &._second {
+          width: 40%;
+        }
+      }
+
+      @include respond-to(lp) {
+        &._first {
+          width: 33%;
+        }
+
+        &._second {
+          width: 27%;
+        }
+      }
+
+      &_header {
+        font-size: 18px;
+        font-family: $MontSemiBold;
+        margin-bottom: 25px;
+
+        @include respond-to(lp) {
+          margin-bottom: 36px;
+        }
+
+        @include respond-to(lg) {
+          font-size: 22px;
+          margin-bottom: 48px;
+        }
+      }
+
+      &_label {
+        font-size: 12px;
+        font-family: $MontBold;
+        text-transform: uppercase;
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: rgba(#000, .2);
+      }
+
+      &_link {
+        font-size: 13px;
+        font-family: $MontSemiBold;
+        cursor: pointer;
+
+        @include respond-to(t) {
+          font-size: 14px;
+        }
+
+        @include respond-to(lg) {
+          font-size: 18px;
+        }
+      }
+
+      &_wrap {
+        position: relative;
+        height: 55px;
+        margin-bottom: 20px;
+        padding-top: 20px;
+
+        @include respond-to(lp) {
+          margin-bottom: 34px;
+        }
+
+        @include respond-to(lg) {
+          margin-bottom: 32px;
+        }
+      }
+    }
+  }
+
+  &-form {
+    background-color: #faf6ff;
+
+    @include respond-to(lp) {
+      padding: 0px 105px 45px;
+      display: flex;
+      width: 100%;
+    }
+
+    @include respond-to(lg) {
+      padding: 0px 180px 45px;
+    }
+
+    .info-text {
+      font-size: 13px;
+      font-family: $MontMedium;
+      margin: 0 auto;
+      color: #4a4a4a;
+      padding: 0 10%;
+      text-align: center;
+      line-height: 1.6;
+
+      @include respond-to(t) {
+        width: 75%;
+        font-size: 14px;
+      }
+
+      @include respond-to(lp) {
+        width: 40%;
+        padding: 3px 40px 0 0;
+        text-align: left;
+      }
+
+      @include respond-to(lg) {
+        font-size: 18px;
+      }
+
+      a {
+        font-size: 13px;
+        font-family: $MontMedium;
+        color: #4a4a4a;
+        cursor: pointer;
+        position: relative;
+        // overflow: hidden;
+        // height: 20px;
+        // line-height: 20px;
+        display: inline-block;
+
+        &:after {
+          content: '';
+          position: absolute;
+          display: block;
+          width: 100%;
+          height: 2px;
+          background: #4a4a4a;
+          bottom: 0px;
+          left: 0;
+          transition: all .6s ease;
+          transform-origin: left;
+        }
+
+        &:hover {
+          &:after {
+            transform: scale(0, 1);
+          }
+        }
+
+        @include respond-to(t) {
+          font-size: 14px;
+        }
+
+        @include respond-to(lg) {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .popup__feedback-block {
+      box-shadow: none;
+      background-color: #faf6ff;
+      padding-top: 50px;
+
+      @include respond-to(lp) {
+        width: 60%;
+        padding: 0;
+      }
+
+
+
+      .big_form-header {
+        @include respond-to(t) {
+          font-size: 24px;
+        }
+
+        @include respond-to(lp) {
+          text-align: left;
+        }
+
+        @include respond-to(lg) {
+          font-size: 30px;
+        }
+      }
+    }
+
+    // .big_form {
+    //   background-color: #faf6ff;
+    //   padding-top: 50px;
+    // }
+
+    .big_form .empty-inputs .input-field {
+      background-color: transparent;
+    }
+  }
+}

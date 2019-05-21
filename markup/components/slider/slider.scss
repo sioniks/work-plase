@@ -1,0 +1,462 @@
+.cd-slider {
+  position: relative;
+  width: 100%;
+  min-height: 565px;
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+
+  @include respond-to(t) {
+    min-height: 490px;
+  }
+
+  .black {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(#000, 0.3);
+    z-index: 1;
+  }
+}
+
+.cd-slider li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  transition: visibility 2s ease;
+  will-change: visibility;
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: 50% 50%;
+  clip: rect(0, 200vw, 200vw, 200vw);
+  transition: clip 1.5s ease;
+  // transition: clip 1.5s cubic-bezier(0.99, 0.01, 0.45, 0.9) .5s;
+  will-change: clip;
+
+  @include respond-to(t) {
+    clip: rect(0, 100vw, 100vw, 100vw);
+  }
+}
+
+.content__text {
+  position: relative;
+  height: 70px;
+  // overflow: hidden;
+  width: 160px;
+  border-bottom: 2px solid rgba(#000, .3);
+
+  @include respond-to(t) {
+    width: 220px;
+  }
+}
+
+.content__text div,
+.content__text a {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  transform: translateY(-30%);
+  opacity: 0;
+  transition: transform .7s, opacity .5s;
+  will-change: transform, opacity;
+  z-index: 10;
+  position: absolute;
+  font-family: $MontSemiBold;
+  top: 15px;
+  left: 0;
+  font-size: 18px;
+  line-height: 1.5;
+  height: 27px;
+  margin-bottom: 15px;
+  // padding-bottom: 10px; 
+
+  @include respond-to(t) {
+    font-size: 24px;
+    height: 36px;
+    top: 7px;
+  }
+
+
+  @include respond-to(lg) {
+    font-size: 30px;
+    height: 50px;
+    top: -6px;
+  }
+
+}
+
+.progress {
+  display: block;
+  position: absolute;
+  bottom: -2px;
+  top: unset !important;
+  left: 0;
+  height: 2px !important;
+  width: 0;
+  background: #000;
+  margin-bottom: 0 !important;
+  z-index: 11 !important;
+  opacity: 1 !important;
+
+
+  &.is-active {
+    width: 100%;
+    transition: all 2s linear 1.5s;
+  }
+}
+
+
+
+/* Current Slide 
+-------------------------------------*/
+li.current {
+  visibility: visible;
+  transition-delay: 0s;
+}
+
+li.current .image {
+  clip: rect(0, 200vw, 200vw, 0);
+
+  @include respond-to(t) {
+    clip: rect(0, 100vw, 100vw, 0);
+  }
+}
+
+.content__text div.current,
+.content__text a.current {
+  transform: translateY(0);
+  opacity: 1;
+  transition-delay: 1s;
+  display: block;
+  position: absolute;
+  z-index: 100;
+}
+
+
+
+/* Prev Slide 
+------------------------------------*/
+li.prev_slide .image {
+  clip: rect(0, 0, 200vw, 0);
+
+  @include respond-to(t) {
+    clip: rect(0, 0, 100vw, 0);
+  }
+}
+
+nav {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: #fff;
+  z-index: 2;
+}
+
+.prev,
+.next,
+.counter {
+  vertical-align: middle;
+}
+
+.slider__control {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #000;
+  color: #fff;
+  border: none;
+
+  &:hover {
+    transition: all 277ms cubic-bezier(0.16, 0.01, 0.77, 1);
+
+    &:before {
+      transform: scaleX(1);
+      transform-origin: left 50%;
+    }
+  }
+
+  &:before {
+    content: '';
+    z-index: 1;
+    transform: scaleX(0);
+    transform-origin: right 50%;
+    transition-property: transform;
+    transition-duration: 380ms;
+    background-color: #bfb7b5;
+    // padding-bottom: 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    opacity: .5;
+  }
+
+  @include respond-to(t) {
+    bottom: 30px;
+    right: -70px;
+    background-color: #fff;
+    color: #000;
+  }
+
+  @include respond-to(lg) {
+    width: 80px;
+    height: 80px;
+    right: -80px;
+    bottom: 25px;
+  }
+
+  &_prev {
+    bottom: -70px;
+    background-color: #fff;
+    color: #000;
+
+    @include respond-to(t) {
+      bottom: 30px;
+      right: 0;
+      background-color: #000;
+      color: #fff;
+    }
+
+    @include respond-to(lg) {
+      bottom: 25px;
+    }
+  }
+
+  &_next {}
+}
+
+
+
+
+
+.slider__content {
+  width: 280px;
+  height: 120px;
+  position: absolute;
+  background-color: #fff;
+  bottom: 100px;
+  left: 20px;
+  z-index: 15;
+
+  @include respond-to(t) {
+    width: 450px;
+    height: 130px;
+    left: 50%;
+    transform: translate(-75%, 0);
+    bottom: 40px;
+  }
+
+  @include respond-to(lp) {
+    bottom: 65px;
+    transform: none;
+    left: 70px;
+  }
+
+  @include respond-to(lg) {
+    width: 510px;
+  }
+}
+
+.content__block {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding: 20px 100px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+
+  @include respond-to(t) {
+    padding: 20px 100px 20px 130px;
+    justify-content: flex-start;
+  }
+
+  @include respond-to(lg) {
+    padding: 27px 100px 20px 150px;
+  }
+}
+
+.counter {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  font-family: $MontSemiBold;
+  font-size: 14px;
+  color: $header-color;
+  z-index: 1;
+
+  @include respond-to(t) {
+    left: 45px;
+    top: 45px;
+    font-size: 16px;
+  }
+
+  & span:last-child::before {
+    content: '/';
+  }
+
+  .current {
+    margin-right: 5px;
+
+    @include respond-to(t) {
+      font-size: 30px;
+    }
+
+    @include respond-to(lg) {
+      font-size: 40px;
+    }
+  }
+
+  .all-items {
+    opacity: 0.2;
+  }
+}
+
+
+.slider-two {
+  .progress {
+    display: none;
+  }
+
+  .content__text {
+    border: none;
+    width: 200px;
+
+    div,
+    a {
+      border-bottom: 2px solid #000;
+      top: 13px;
+
+      @include respond-to(lg) {
+        height: 50px;
+      }
+    }
+
+    @include respond-to(t) {
+      width: 290px;
+    }
+
+    @include respond-to(lg) {
+      width: 390px;
+    }
+
+  }
+
+  .content__block {
+    padding: 20px 80px 20px 10px;
+
+    @include respond-to(t) {
+      padding: 50px 20px 20px 125px;
+    }
+
+    @include respond-to(lg) {
+      padding: 85px 60px 20px 150px;
+    }
+  }
+
+  .slider__content {
+    height: 150px;
+
+    @include respond-to(t) {
+      height: 210px;
+      bottom: 60px;
+      right: 50px;
+      left: auto;
+      transform: none;
+    }
+
+    @include respond-to(lg) {
+      height: 250px;
+      width: 600px;
+    }
+  }
+
+  .counter {
+    left: 20px;
+    top: 20px;
+
+    @include respond-to(t) {
+      left: 50px;
+      top: 55px;
+    }
+
+    @include respond-to(lg) {
+      left: 62px;
+      top: 85px;
+    }
+
+    .current {
+      display: block;
+      position: absolute;
+      width: 41px;
+      height: 41px;
+      line-height: 37px;
+      text-align: center;
+      font-family: $MontSemiBold;
+      font-size: 16px;
+      color: rgba(#000, .2);
+      border: 3px solid rgba(#000, .2);
+      border-radius: 50px;
+
+      @include respond-to(t) {
+        font-size: 20px;
+        width: 51px;
+        height: 51px;
+        line-height: 47px;
+      }
+
+      @include respond-to(lg) {
+        font-size: 24px;
+        width: 64px;
+        height: 64px;
+        line-height: 60px;
+      }
+    }
+  }
+
+  .all-items {
+    display: none;
+  }
+
+  .slider__control_prev {
+    @include respond-to(t) {
+      right: auto;
+      left: -70px;
+      bottom: 0;
+      background-color: #fff;
+      color: #000;
+    }
+
+    @include respond-to(lg) {
+      left: -80px;
+    }
+  }
+
+  .slider__control_next {
+    @include respond-to(t) {
+      right: auto;
+      left: 0;
+      bottom: 0;
+      background-color: #000;
+      color: #fff;
+    }
+
+  }
+}
